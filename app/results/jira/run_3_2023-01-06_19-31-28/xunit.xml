@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="sample_labels" package_name="bzt">
+    <testcase classname="bzt-8776509197222" name="jmeter_add_comment:open_comment"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_add_comment:save_comment"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_app_specific_action"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_browse_boards"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_browse_projects"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_create_issue:fill_and_submit_issue_form"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_create_issue:open_quick_create"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_edit_issue:open_editor"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_edit_issue:save_edit"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_login_and_view_dashboard"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_search_jql"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_backlog"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_dashboard"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_issue"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_kanban_board"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_project_summary"/>
+    <testcase classname="bzt-8776509197222" name="jmeter_view_scrum_board"/>
+    <testcase classname="bzt-8776509197222" name="selenium_a_login">
+      <error message="Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException(&quot;Error in wait_until: Timed out after 20 sec waiting for &lt;function visibility_of_element_located.&lt;locals&gt;._predicate at 0x7fe976c26a70&gt;. \nLocator: ('class name', 'page-type-dashboard')&quot;, None, ['#0 0x5566ac6092a3 &lt;unknown&gt;', '#1 0x5566ac3c7f77 &lt;unknown&gt;', '#2 0x5566ac40480c &lt;unknown&gt;', '#3 0x5566ac404a71 &lt;unknown&gt;', '#4 0x5566ac43e734 &lt;unknown&gt;', '#5 0x5566ac424b5d &lt;unknown&gt;', '#6 0x5566ac43c47c &lt;unknown&gt;', '#7 0x5566ac424903 &lt;unknown&gt;', '#8 0x5566ac3f7ece &lt;unknown&gt;', '#9 0x5566ac3f8fde &lt;unknown&gt;', '#10 0x5566ac65963e &lt;unknown&gt;', '#11 0x5566ac65cb79 &lt;unknown&gt;', '#12 0x5566ac63f89e &lt;unknown&gt;', '#13 0x5566ac65da83 &lt;unknown&gt;', '#14 0x5566ac632505 &lt;unknown&gt;', '#15 0x5566ac67eca8 &lt;unknown&gt;', '#16 0x5566ac67ee36 &lt;unknown&gt;', '#17 0x5566ac69a333 &lt;unknown&gt;', '#18 0x7ff2be597ea7 start_thread', ''])))" type="Error">Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException("Error in wait_until: Timed out after 20 sec waiting for &lt;function visibility_of_element_located.&lt;locals&gt;._predicate at 0x7fe976c26a70&gt;. \nLocator: ('class name', 'page-type-dashboard')", None, ['#0 0x5566ac6092a3 &lt;unknown&gt;', '#1 0x5566ac3c7f77 &lt;unknown&gt;', '#2 0x5566ac40480c &lt;unknown&gt;', '#3 0x5566ac404a71 &lt;unknown&gt;', '#4 0x5566ac43e734 &lt;unknown&gt;', '#5 0x5566ac424b5d &lt;unknown&gt;', '#6 0x5566ac43c47c &lt;unknown&gt;', '#7 0x5566ac424903 &lt;unknown&gt;', '#8 0x5566ac3f7ece &lt;unknown&gt;', '#9 0x5566ac3f8fde &lt;unknown&gt;', '#10 0x5566ac65963e &lt;unknown&gt;', '#11 0x5566ac65cb79 &lt;unknown&gt;', '#12 0x5566ac63f89e &lt;unknown&gt;', '#13 0x5566ac65da83 &lt;unknown&gt;', '#14 0x5566ac632505 &lt;unknown&gt;', '#15 0x5566ac67eca8 &lt;unknown&gt;', '#16 0x5566ac67ee36 &lt;unknown&gt;', '#17 0x5566ac69a333 &lt;unknown&gt;', '#18 0x7ff2be597ea7 start_thread', ''])))
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8776509197222" name="selenium_browse_boards_list"/>
+    <testcase classname="bzt-8776509197222" name="selenium_browse_projects_list"/>
+    <testcase classname="bzt-8776509197222" name="selenium_create_issue"/>
+    <testcase classname="bzt-8776509197222" name="selenium_edit_issue"/>
+    <testcase classname="bzt-8776509197222" name="selenium_save_comment"/>
+    <testcase classname="bzt-8776509197222" name="selenium_search_jql"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_backlog_for_scrum_board"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_dashboard"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_issue"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_kanban_board"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_project_summary"/>
+    <testcase classname="bzt-8776509197222" name="selenium_view_scrum_board"/>
+    <testcase classname="bzt-8776509197222" name="selenium_z_log_out"/>
+  </testsuite>
+</testsuites>
