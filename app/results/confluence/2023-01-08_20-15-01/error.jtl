@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="12" lt="12" ts="1673209272881" s="false" lb="Get Tokens" rc="200" rm="" tn="Confluence 1-133" dt="text" de="" by="293" ng="200" na="200">
+  <assertionResult>
+    <name>assertion after GET request</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /label/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Content-Type: application/json
+Date: Sun, 08 Jan 2023 20:21:12 GMT
+X-AUSERNAME: admin
+X-Confluence-Cluster-Node: 36005db7
+X-Confluence-Cluster-Node-Name: confluence-0
+X-Content-Type-Options: nosniff
+X-Seraph-LoginReason: OK
+Content-Length: 2
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com:80
+Host: ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.16)
+</requestHeader>
+  <responseData class="java.lang.String">[]</responseData>
+  <cookies class="java.lang.String">INGRESSCOOKIE=b1b258e61bc3e4470ad084c39a2a1db8|bc7938bbab5da9ce7e6ee05df935b659; JSESSIONID=05B7C4DA6726E33B7C868C08B5D32444; seraph.confluence=41587616%3A9a9b2739fba055aee7e1a99096bb85aa1f3edb76</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com/confluence/rest/api-tokens/latest/?_=1607733192632</java.net.URL>
+</httpSample>
+<httpSample t="4" lt="4" ts="1673209715823" s="false" lb="Get Tokens" rc="200" rm="" tn="Confluence 1-116" dt="text" de="" by="312" ng="200" na="200">
+  <assertionResult>
+    <name>assertion after GET request</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /label/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Content-Type: application/json
+Date: Sun, 08 Jan 2023 20:28:35 GMT
+X-AUSERNAME: admin
+X-Confluence-Cluster-Node: 36005db7
+X-Confluence-Cluster-Node-Name: confluence-0
+X-Content-Type-Options: nosniff
+X-Seraph-LoginReason: OK
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com:80
+Host: ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.16)
+</requestHeader>
+  <responseData class="java.lang.String">[]</responseData>
+  <cookies class="java.lang.String">INGRESSCOOKIE=b1b258e61bc3e4470ad084c39a2a1db8|bc7938bbab5da9ce7e6ee05df935b659; JSESSIONID=F74645F29DF31385C0B55854D6EF4963; seraph.confluence=41587866%3Ae2a78837f6f0d509652f02395bb1eb9a5a3f5c1c</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com/confluence/rest/api-tokens/latest/?_=1607733192632</java.net.URL>
+</httpSample>
+<httpSample t="5" lt="5" ts="1673209773973" s="false" lb="Get Tokens" rc="200" rm="" tn="Confluence 1-179" dt="text" de="" by="293" ng="200" na="200">
+  <assertionResult>
+    <name>assertion after GET request</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /label/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Content-Type: application/json
+Date: Sun, 08 Jan 2023 20:29:33 GMT
+X-AUSERNAME: admin
+X-Confluence-Cluster-Node: 36005db7
+X-Confluence-Cluster-Node-Name: confluence-0
+X-Content-Type-Options: nosniff
+X-Seraph-LoginReason: OK
+Content-Length: 2
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com:80
+Host: ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.16)
+</requestHeader>
+  <responseData class="java.lang.String">[]</responseData>
+  <cookies class="java.lang.String">INGRESSCOOKIE=b1b258e61bc3e4470ad084c39a2a1db8|bc7938bbab5da9ce7e6ee05df935b659; JSESSIONID=6387D8E6D96FA4D0FC70D43908A7F9C2; seraph.confluence=41587900%3Aeda7d36559531a74bd32cb028ada7acc8b4f0f0e</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com/confluence/rest/api-tokens/latest/?_=1607733192632</java.net.URL>
+</httpSample>
+<httpSample t="27" lt="27" ts="1673210190842" s="false" lb="Get Tokens" rc="200" rm="" tn="Confluence 1-145" dt="text" de="" by="293" ng="200" na="200">
+  <assertionResult>
+    <name>assertion after GET request</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /label/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Content-Type: application/json
+Date: Sun, 08 Jan 2023 20:36:30 GMT
+X-AUSERNAME: admin
+X-Confluence-Cluster-Node: 36005db7
+X-Confluence-Cluster-Node-Name: confluence-0
+X-Content-Type-Options: nosniff
+X-Seraph-LoginReason: OK
+Content-Length: 2
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com:80
+Host: ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.16)
+</requestHeader>
+  <responseData class="java.lang.String">[]</responseData>
+  <cookies class="java.lang.String">INGRESSCOOKIE=b1b258e61bc3e4470ad084c39a2a1db8|bc7938bbab5da9ce7e6ee05df935b659; JSESSIONID=4ED3C243C479687743399CC67E5160B9; seraph.confluence=41588133%3A98b39ddb48f39b78741c1fa457c2962e2cebd322</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com/confluence/rest/api-tokens/latest/?_=1607733192632</java.net.URL>
+</httpSample>
+<httpSample t="24" lt="24" ts="1673211061105" s="false" lb="Get Tokens" rc="200" rm="" tn="Confluence 1-197" dt="text" de="" by="293" ng="200" na="200">
+  <assertionResult>
+    <name>assertion after GET request</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /label/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+Content-Type: application/json
+Date: Sun, 08 Jan 2023 20:51:01 GMT
+X-AUSERNAME: admin
+X-Confluence-Cluster-Node: 36005db7
+X-Confluence-Cluster-Node-Name: confluence-0
+X-Content-Type-Options: nosniff
+X-Seraph-LoginReason: OK
+Content-Length: 2
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com:80
+Host: ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.16)
+</requestHeader>
+  <responseData class="java.lang.String">[]</responseData>
+  <cookies class="java.lang.String">INGRESSCOOKIE=b1b258e61bc3e4470ad084c39a2a1db8|bc7938bbab5da9ce7e6ee05df935b659; JSESSIONID=3741ABC34CA549B67A88AFD70D85AD27; seraph.confluence=41588619%3A763c23416bb6b3b961a1cb3643752bf6f9909a8d</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://ac0bb75013f81421c8212c22592d1cec-25701128.us-east-2.elb.amazonaws.com/confluence/rest/api-tokens/latest/?_=1607733192632</java.net.URL>
+</httpSample>
+
+</testResults>

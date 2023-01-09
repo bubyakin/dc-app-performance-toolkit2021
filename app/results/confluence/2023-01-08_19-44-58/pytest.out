@@ -1,0 +1,165 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.9, pytest-7.2.0, pluggy-1.0.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.1.0, apiritif-1.1.3
+collected 10 items
+
+selenium_ui/confluence_ui.py first driver inits
+node_id:36005db7
+.test_0_selenium_a_login,Total:1 Passed:1 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.0024297237396240234 s.
+.test_1_selenium_view_blog,Total:2 Passed:2 Failed:0
+.test_1_selenium_view_dashboard,Total:3 Passed:3 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.002500772476196289 s.
+.test_1_selenium_view_page,Total:4 Passed:4 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.002038717269897461 s.
+.test_1_selenium_view_page_from_cache,Total:5 Passed:5 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.0020456314086914062 s.
+.test_1_selenium_create_page,Total:6 Passed:6 Failed:0
+.test_1_selenium_edit_by_url,Total:7 Passed:7 Failed:0
+Waiting for resources to be loaded: 5 s.
+Resources are loaded after 0.4592413902282715 s.
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.0018801689147949219 s.
+.test_1_selenium_edit_page_quick_edit,Total:8 Passed:8 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.001836538314819336 s.
+1673207184421,637,selenium_create_comment:write_comment,Success,True
+1673207184997,575,selenium_create_comment:save_comment,Success,True
+1673207184997,1519,selenium_create_comment,Success,True
+.test_1_selenium_create_inline_comment,Total:9 Passed:9 Failed:0
+1673207185127,128,selenium_log_out,Success,True
+.test_2_selenium_z_log_out,Total:10 Passed:10 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171
+  /root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+selenium_ui/confluence_ui.py::test_0_selenium_a_login
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/chrome/webdriver.py:70: DeprecationWarning: desired_capabilities has been deprecated, please pass in a Service object
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+
+selenium_ui/confluence_ui.py: 202 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:376: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    if resp.getheader('Content-Type'):
+
+selenium_ui/confluence_ui.py: 202 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:377: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    content_type = resp.getheader('Content-Type').split(';')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 10 passed, 406 warnings in 23.43s =======================
+============================= test session starts ==============================
+platform linux -- Python 3.10.9, pytest-7.2.0, pluggy-1.0.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.1.0, apiritif-1.1.3
+collected 10 items
+
+selenium_ui/confluence_ui.py get driver from global
+clear browser cookies
+node_id:36005db7
+.test_0_selenium_a_login,Total:11 Passed:11 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.009133100509643555 s.
+.test_1_selenium_view_blog,Total:12 Passed:12 Failed:0
+.test_1_selenium_view_dashboard,Total:13 Passed:13 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.0064580440521240234 s.
+.test_1_selenium_view_page,Total:14 Passed:14 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.03607583045959473 s.
+.test_1_selenium_view_page_from_cache,Total:15 Passed:15 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.010317802429199219 s.
+.test_1_selenium_create_page,Total:16 Passed:16 Failed:0
+.test_1_selenium_edit_by_url,Total:17 Passed:17 Failed:0
+Waiting for resources to be loaded: 5 s.
+Resources are loaded after 0.2694399356842041 s.
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.002093791961669922 s.
+.test_1_selenium_edit_page_quick_edit,Total:18 Passed:18 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.008780956268310547 s.
+1673207194810,548,selenium_create_comment:write_comment,Success,True
+1673207195387,576,selenium_create_comment:save_comment,Success,True
+1673207195387,1713,selenium_create_comment,Success,True
+.test_1_selenium_create_inline_comment,Total:19 Passed:19 Failed:0
+1673207195516,127,selenium_log_out,Success,True
+.test_2_selenium_z_log_out,Total:20 Passed:20 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171
+  /root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+selenium_ui/confluence_ui.py: 148 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:376: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    if resp.getheader('Content-Type'):
+
+selenium_ui/confluence_ui.py: 148 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:377: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    content_type = resp.getheader('Content-Type').split(';')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 10 passed, 297 warnings in 10.36s =======================
+============================= test session starts ==============================
+platform linux -- Python 3.10.9, pytest-7.2.0, pluggy-1.0.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.1.0, apiritif-1.1.3
+collected 10 items
+
+selenium_ui/confluence_ui.py get driver from global
+clear browser cookies
+node_id:36005db7
+.test_0_selenium_a_login,Total:21 Passed:21 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.05521035194396973 s.
+.test_1_selenium_view_blog,Total:22 Passed:22 Failed:0
+.test_1_selenium_view_dashboard,Total:23 Passed:23 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.009595870971679688 s.
+.test_1_selenium_view_page,Total:24 Passed:24 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.001932382583618164 s.
+.test_1_selenium_view_page_from_cache,Total:25 Passed:25 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.002435922622680664 s.
+.test_1_selenium_create_page,Total:26 Passed:26 Failed:0
+.test_1_selenium_edit_by_url,Total:27 Passed:27 Failed:0
+Waiting for resources to be loaded: 5 s.
+Resources are loaded after 0.8543491363525391 s.
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.002443075180053711 s.
+.test_1_selenium_edit_page_quick_edit,Total:28 Passed:28 Failed:0
+Waiting for document.readyState is equal to complete: 20 s.
+document.readyState == complete after 0.006681919097900391 s.
+1673207213041,1949,selenium_create_comment:write_comment,Success,True
+1673207213619,578,selenium_create_comment:save_comment,Success,True
+1673207213619,5909,selenium_create_comment,Success,True
+.test_1_selenium_create_inline_comment,Total:29 Passed:29 Failed:0
+1673207213759,138,selenium_log_out,Success,True
+.test_2_selenium_z_log_out,Total:30 Passed:30 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171
+  /root/.bzt/python-packages/3.10.9/_pytest/config/__init__.py:1171: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+selenium_ui/confluence_ui.py: 418 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:376: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    if resp.getheader('Content-Type'):
+
+selenium_ui/confluence_ui.py: 418 warnings
+  /dc-app-performance-toolkit/app/results/confluence/2023-01-08_19-44-58/python-packages/3.10.9/selenium/webdriver/remote/remote_connection.py:377: DeprecationWarning: HTTPResponse.getheader() is deprecated and will be removed in urllib3 v2.1.0. Instead use HTTResponse.headers.get(name, default).
+    content_type = resp.getheader('Content-Type').split(';')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 10 passed, 837 warnings in 18.21s =======================

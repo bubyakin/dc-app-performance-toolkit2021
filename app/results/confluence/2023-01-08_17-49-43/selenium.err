@@ -1,0 +1,58 @@
+01-08-2023, 17:52:58, 1673200378744, Action: test_1_selenium_create_page, Error: confluence_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="56b828511aa21dff5bb26b31478f5249")>
+confluence_datasets = {'blog_id': '3110324', 'blogs': [['7847985', 'KTRS', '1'], ['7850648', 'INAC', '1'], ['7848887', 'SKNR', '1'], ['78495..., '1'], ['7851154', 'ECT', '1'], ['7848490', 'ISMWE', '1'], ...], 'create_comment_page': None, 'custom_pages': [], ...}
+confluence_screen_shots = None
+
+    def test_1_selenium_create_page(confluence_webdriver, confluence_datasets, confluence_screen_shots):
+>       modules.create_confluence_page(confluence_webdriver, confluence_datasets)
+
+selenium_ui/confluence_ui.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/confluence/modules.py:169: in create_confluence_page
+    measure()
+selenium_ui/confluence/modules.py:167: in measure
+    sub_measure()
+selenium_ui/confluence/modules.py:164: in sub_measure
+    page.wait_for_page_loaded()
+selenium_ui/confluence/pages/pages.py:79: in wait_for_page_loaded
+    self.wait_until_visible(self.page_loaded_selector)
+selenium_ui/base_page.py:78: in wait_until_visible
+    return self.__wait_until(expected_condition=ec.visibility_of_element_located(selector), locator=selector,
+selenium_ui/base_page.py:132: in __wait_until
+    return WebDriverWait(self.driver, time_out).until(expected_condition, message=message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="56b828511aa21dff5bb26b31478f5249")>
+method = <function visibility_of_element_located.<locals>._predicate at 0x7fd4165989d0>
+message = "Error in wait_until: Timed out after 20 sec waiting for <function visibility_of_element_located.<locals>._predicate at 0x7fd4165989d0>. \nLocator: ('id', 'title-text')"
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value does not evaluate to ``False``.
+    
+        :param method: callable(WebDriver)
+        :param message: optional message for :exc:`TimeoutException`
+        :returns: the result of the last call to `method`
+        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except InvalidSelectorException as e:
+                raise e
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() > end_time:
+                break
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: Error in wait_until: Timed out after 20 sec waiting for <function visibility_of_element_located.<locals>._predicate at 0x7fd4165989d0>. 
+E       Locator: ('id', 'title-text')
+
+results/confluence/2023-01-08_17-49-43/python-packages/3.10.9/selenium/webdriver/support/wait.py:89: TimeoutException

@@ -1,0 +1,38 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,App specific
+jmeter_login_and_view_dashboard,200,2522,2672,3824,4016,4730,144,4765,0.0,False
+jmeter_view_page:open_page,165,5496,5743,8604,8742,8912,267,8998,0.0,False
+jmeter_search_cql:recently_viewed,36,551,298,1385,1578,2052,29,2270,0.0,False
+jmeter_create_and_edit_page:create_page_editor,35,1407,1407,2305,2705,2902,101,2963,0.0,False
+jmeter_create_blog:blog_editor,16,1886,1680,3626,3921,4546,131,4702,0.0,False
+jmeter_search_cql:search_results,36,3479,3694,4768,5198,5624,546,5695,0.0,False
+jmeter_view_dashboard,33,4840,4655,6813,7042,7383,674,7479,0.0,False
+jmeter_view_blog,56,5130,5381,7829,8272,8414,275,8519,0.0,False
+jmeter_create_blog:feel_and_publish,16,2977,2470,6356,7479,7813,315,7897,0.0,False
+jmeter_create_and_edit_page:create_page,35,4308,3790,8743,9090,9318,302,9431,0.0,False
+jmeter_create_and_edit_page:open_editor,35,217,104,639,772,839,28,872,0.0,False
+jmeter_create_and_edit_page:edit_page,35,1465,1279,1934,3521,4048,434,4058,0.0,False
+jmeter_create_and_edit_page:quick_edit_page,35,981,879,1461,1715,3074,391,3737,0.0,False
+jmeter_comment_page,16,474,330,1019,1286,1396,52,1423,0.0,False
+jmeter_view_attachment,13,2084,2130,3406,3445,3482,276,3491,0.0,False
+jmeter_like_page,6,452,282,1016,1250,1438,34,1485,0.0,False
+Create token,6,918,692,1476,1518,1552,548,1560,0.0,True
+Get Tokens,6,114,56,272,312,345,8,353,0.0,True
+Use Token,6,180,86,432,493,543,20,555,0.0,True
+Delete Token,6,235,71,620,840,1016,13,1060,0.0,True
+jmeter_upload_attachment,7,3585,4020,4666,4803,4913,2349,4941,0.0,False
+selenium_login:open_login_page,3,154,77,266,289,308,72,313,0.0,False
+selenium_login:login_and_view_dashboard,3,258,174,376,402,422,172,427,0.0,False
+selenium_view_blog,3,557,507,635,651,664,498,667,0.0,False
+selenium_view_dashboard,3,168,146,224,233,241,116,243,0.0,False
+selenium_view_page,3,1461,256,3174,3539,3831,222,3904,0.0,False
+selenium_view_page_from_cache,3,1105,330,2240,2479,2670,266,2718,0.0,False
+selenium_create_page:open_create_page_editor,3,2231,365,4911,5479,5933,281,6047,0.0,False
+selenium_create_page:save_created_page,3,258,163,407,438,462,144,468,0.0,False
+selenium_edit_page_by_url:open_create_page_editor,3,321,251,437,460,478,228,483,0.0,False
+selenium_edit_page_by_url:save_edited_page,3,389,289,532,563,587,286,593,0.0,False
+selenium_quick_edit_page_click:open_create_page_editor,3,443,232,756,822,874,211,887,0.0,False
+selenium_quick_edit_page_click:save_edited_page,3,630,418,1068,1149,1214,243,1230,0.0,False
+selenium_create_comment:write_comment,3,1045,637,1687,1818,1923,548,1949,0.0,False
+selenium_create_comment:save_comment,3,576,576,578,578,578,575,578,0.0,False
+selenium_create_comment,3,3047,1713,5070,5489,5825,1519,5909,0.0,False
+selenium_log_out,3,131,128,136,137,138,127,138,0.0,False

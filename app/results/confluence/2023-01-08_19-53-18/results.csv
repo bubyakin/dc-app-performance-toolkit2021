@@ -1,0 +1,38 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,App specific
+jmeter_login_and_view_dashboard,200,122,114,169,193,227,73,255,0.0,False
+jmeter_view_page:open_page,415,393,389,494,526,594,206,699,0.0,False
+jmeter_view_blog,150,486,479,588,629,726,254,772,0.0,False
+jmeter_view_dashboard,97,507,521,593,645,817,233,975,0.0,False
+jmeter_create_and_edit_page:create_page_editor,91,114,103,151,169,241,77,289,0.0,False
+jmeter_create_and_edit_page:create_page,91,282,270,359,375,477,202,537,0.0,False
+jmeter_create_and_edit_page:open_editor,91,16,14,18,20,43,11,83,0.0,False
+jmeter_create_and_edit_page:edit_page,91,265,250,330,348,474,213,511,0.0,False
+jmeter_create_and_edit_page:quick_edit_page,91,255,231,344,401,437,206,458,0.0,False
+jmeter_search_cql:recently_viewed,107,28,28,43,49,54,9,55,0.0,False
+jmeter_search_cql:search_results,105,449,447,549,582,654,269,705,0.0,False
+jmeter_create_blog:blog_editor,44,133,121,167,230,248,97,254,0.0,False
+jmeter_create_blog:feel_and_publish,44,249,240,315,339,440,176,515,0.0,False
+jmeter_comment_page,64,51,42,77,112,140,28,152,0.0,False
+jmeter_view_attachment,45,234,224,302,330,404,164,415,0.0,False
+jmeter_like_page,23,32,30,40,40,52,25,56,0.0,False
+jmeter_upload_attachment,46,537,546,680,763,792,333,793,0.0,False
+Create token,81,123,111,152,186,214,94,280,0.0,True
+Get Tokens,81,7,6,11,12,17,4,23,0.0,True
+Use Token,81,8,6,13,14,19,4,25,0.0,True
+Delete Token,81,9,7,13,15,28,5,49,0.0,True
+selenium_login:open_login_page,4,166,143,271,286,298,79,301,0.0,False
+selenium_login:login_and_view_dashboard,4,250,190,391,432,464,148,472,0.0,False
+selenium_view_blog,4,766,694,1015,1081,1134,530,1147,0.0,False
+selenium_view_dashboard,4,157,151,172,177,180,145,181,0.0,False
+selenium_view_page,4,560,566,663,673,682,423,684,0.0,False
+selenium_view_page_from_cache,4,292,304,330,333,335,224,335,0.0,False
+selenium_create_page:open_create_page_editor,4,386,330,515,550,578,300,585,0.0,False
+selenium_create_page:save_created_page,4,174,170,187,191,193,162,194,0.0,False
+selenium_edit_page_by_url:open_create_page_editor,4,356,356,388,390,392,319,392,0.0,False
+selenium_edit_page_by_url:save_edited_page,4,316,292,376,392,405,274,408,0.0,False
+selenium_quick_edit_page_click:open_create_page_editor,4,324,321,400,407,413,239,414,0.0,False
+selenium_quick_edit_page_click:save_edited_page,4,314,300,404,423,439,216,443,0.0,False
+selenium_create_comment:write_comment,4,655,651,688,692,696,621,697,0.0,False
+selenium_create_comment:save_comment,4,579,578,582,583,583,576,583,0.0,False
+selenium_create_comment,4,1595,1611,1628,1629,1630,1528,1630,0.0,False
+selenium_log_out,4,130,131,132,132,132,124,132,0.0,False

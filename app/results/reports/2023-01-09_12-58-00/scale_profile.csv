@@ -1,0 +1,38 @@
+Action,1 Node,2 Nodes,4 Nodes,App-specific
+jmeter_login_and_view_dashboard,195,164,144,False
+jmeter_view_page:open_page,385,302,260,False
+jmeter_view_blog,529,589,500,False
+jmeter_view_dashboard,551,413,342,False
+jmeter_create_and_edit_page:create_page_editor,150,113,102,False
+jmeter_create_and_edit_page:create_page,342,277,244,False
+jmeter_create_and_edit_page:open_editor,19,15,15,False
+jmeter_create_and_edit_page:edit_page,369,284,261,False
+jmeter_create_and_edit_page:quick_edit_page,352,253,247,False
+jmeter_search_cql:recently_viewed,26,21,17,False
+jmeter_search_cql:search_results,443,324,278,False
+jmeter_create_blog:blog_editor,177,138,119,False
+jmeter_create_blog:feel_and_publish,336,256,222,False
+jmeter_comment_page,67,41,35,False
+jmeter_view_attachment,250,188,164,False
+jmeter_like_page,32,27,26,False
+jmeter_upload_attachment,795,465,435,False
+Create token,142,106,92,True
+Get Tokens,8,5,5,True
+Use Token,9,6,5,True
+Delete Token,10,6,6,True
+selenium_login:open_login_page,100,84,80,False
+selenium_login:login_and_view_dashboard,206,185,182,False
+selenium_view_blog,674,761,694,False
+selenium_view_dashboard,188,170,174,False
+selenium_view_page,627,470,441,False
+selenium_view_page_from_cache,387,356,320,False
+selenium_create_page:open_create_page_editor,371,373,350,False
+selenium_create_page:save_created_page,224,216,257,False
+selenium_edit_page_by_url:open_create_page_editor,429,368,515,False
+selenium_edit_page_by_url:save_edited_page,429,382,357,False
+selenium_quick_edit_page_click:open_create_page_editor,408,330,328,False
+selenium_quick_edit_page_click:save_edited_page,385,348,313,False
+selenium_create_comment:write_comment,1047,998,1016,False
+selenium_create_comment:save_comment,579,581,577,False
+selenium_create_comment,2102,2000,2033,False
+selenium_log_out,157,134,137,False
