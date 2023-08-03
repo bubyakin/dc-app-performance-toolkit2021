@@ -9147,7 +9147,7 @@ if ( sleep_time &gt; 0 ) {
               </JSR223PreProcessor>
               <hashTree/>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="login_as_specific_user" enabled="false"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="login_as_specific_user" enabled="true"/>
             <hashTree>
               <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="username:password" enabled="true">
                 <collectionProp name="Arguments.arguments">
@@ -9316,19 +9316,6 @@ if (response_data.name != vars.get(&quot;app_specific_username&quot;)) {
               <boolProp name="TransactionController.parent">true</boolProp>
             </TransactionController>
             <hashTree>
-              <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
-                <collectionProp name="AuthManager.auth_list">
-                  <elementProp name="" elementType="Authorization">
-                    <stringProp name="Authorization.url"></stringProp>
-                    <stringProp name="Authorization.username">admin</stringProp>
-                    <stringProp name="Authorization.password">admin</stringProp>
-                    <stringProp name="Authorization.domain"></stringProp>
-                    <stringProp name="Authorization.realm"></stringProp>
-                  </elementProp>
-                </collectionProp>
-                <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
-              </AuthManager>
-              <hashTree/>
               <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
                 <collectionProp name="UserParameters.names">
                   <stringProp name="1845020747">newName</stringProp>
@@ -9458,13 +9445,6 @@ if (response_data.name != vars.get(&quot;app_specific_username&quot;)) {
                 </JSONPathAssertion>
                 <hashTree/>
               </hashTree>
-              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
-                <stringProp name="filename"></stringProp>
-                <stringProp name="parameters"></stringProp>
-                <boolProp name="resetInterpreter">false</boolProp>
-                <stringProp name="script">sampler.getHeaderManager().removeHeaderNamed(&quot;Authorization&quot;);</stringProp>
-              </BeanShellPostProcessor>
-              <hashTree/>
             </hashTree>
             <IfController guiclass="IfControllerPanel" testclass="IfController" testname="login_as_default_user_if_specific_user_was_loggedin " enabled="true">
               <stringProp name="IfController.condition">${run_as_specific_user}</stringProp>
