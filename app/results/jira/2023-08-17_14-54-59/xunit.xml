@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="sample_labels" package_name="bzt">
+    <testcase classname="bzt-8759775589349" name="check_logged_in_as_default_user">
+      <error message="Re-login Failed: username: 'performance_dqphujweup' failed to login. Check the CAPTCHA for 'performance_dqphujweup' user." type="Error">Re-login Failed: username: 'performance_dqphujweup' failed to login. Check the CAPTCHA for 'performance_dqphujweup' user.
+(status code is 200)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="check_logged_in_as_specific_user">
+      <error message="Login Failed: Your app_specific_username: 'admin' or password is incorrect. Also, check the CAPTCHA for 'admin' user." type="Error">Login Failed: Your app_specific_username: 'admin' or password is incorrect. Also, check the CAPTCHA for 'admin' user.
+(status code is 200)
+(total errors of this type: 3)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_add_comment:open_comment">
+      <failure message="Test failed: text expected to contain /Add Comment: AAFAIA-1259/" type="Assertion Failure">Test failed: text expected to contain /Add Comment: AAFAIA-1259/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /Add Comment: AABIS-326/" type="Assertion Failure">Test failed: text expected to contain /Add Comment: AABIS-326/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /Add Comment: AAFAIA-3209/" type="Assertion Failure">Test failed: text expected to contain /Add Comment: AAFAIA-3209/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_add_comment:save_comment">
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-1259&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-1259"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AABIS-326&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AABIS-326"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-3209&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-3209"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_app_specific_action">
+      <error message="Number of samples in transaction : 4, number of failing samples : 1" type="Error">Number of samples in transaction : 4, number of failing samples : 1
+(status code is 500)
+(total errors of this type: 50)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_browse_boards">
+      <error message="Number of samples in transaction : 5, number of failing samples : 1" type="Error">Number of samples in transaction : 5, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_browse_projects">
+      <failure message="Test failed: text expected to contain /WRM._unparsedData[&quot;com.atlassian.jira.project.browse:projects&quot;]=&quot;/" type="Assertion Failure">Test failed: text expected to contain /WRM._unparsedData["com.atlassian.jira.project.browse:projects"]="/
+(status code is 200)
+(total errors of this type: 5)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_create_issue:fill_and_submit_issue_form">
+      <failure message="Test failed: text expected to contain /&quot;id&quot;:&quot;project&quot;,&quot;label&quot;:&quot;Project&quot;/" type="Assertion Failure">Test failed: text expected to contain /"id":"project","label":"Project"/
+(status code is 200)
+(total errors of this type: 8)</failure>
+      <error message="Number of samples in transaction : 2, number of failing samples : 1" type="Error">Number of samples in transaction : 2, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_create_issue:open_quick_create">
+      <error message="Number of samples in transaction : 3, number of failing samples : 1" type="Error">Number of samples in transaction : 3, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 7)</error>
+      <error message="Number of samples in transaction : 3, number of failing samples : 2" type="Error">Number of samples in transaction : 3, number of failing samples : 2
+(status code is 401)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_edit_issue:open_editor">
+      <failure message="Test failed: text expected to contain / Edit Issue:  [AAFAIA-744]/" type="Assertion Failure">Test failed: text expected to contain / Edit Issue:  [AAFAIA-744]/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_edit_issue:save_edit">
+      <failure message="Test failed: text expected to contain /[AAFAIA-744]/" type="Assertion Failure">Test failed: text expected to contain /[AAFAIA-744]/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_login_and_view_dashboard">
+      <error message="Number of samples in transaction : 10, number of failing samples : 1" type="Error">Number of samples in transaction : 10, number of failing samples : 1
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 30)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 2" type="Error">Number of samples in transaction : 10, number of failing samples : 2
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 29)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 3" type="Error">Number of samples in transaction : 10, number of failing samples : 3
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_search_jql">
+      <error message="Number of samples in transaction : 14, number of failing samples : 1" type="Error">Number of samples in transaction : 14, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 2" type="Error">Number of samples in transaction : 13, number of failing samples : 2
+(status code is 502)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_backlog">
+      <error message="Number of samples in transaction : 13, number of failing samples : 1" type="Error">Number of samples in transaction : 13, number of failing samples : 1
+(status code is 401)
+(total errors of this type: 1)</error>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:55,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":55,\"/
+(status code is 200)
+(total errors of this type: 2)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:64,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":64,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:62,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":62,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:60,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":60,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <error message="Number of samples in transaction : 7, number of failing samples : 1" type="Error">Number of samples in transaction : 7, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_dashboard">
+      <error message="Number of samples in transaction : 8, number of failing samples : 1" type="Error">Number of samples in transaction : 8, number of failing samples : 1
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 476)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 2" type="Error">Number of samples in transaction : 8, number of failing samples : 2
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 4)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_issue">
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-744&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-744"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-1006&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-1006"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-1259&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-1259"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AABIS-64&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AABIS-64"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AABIS-326&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AABIS-326"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-26&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-26"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-288&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-288"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-435&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-435"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-573&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-573"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-861&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-861"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-1050&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-1050"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <error message="Number of samples in transaction : 9, number of failing samples : 1" type="Error">Number of samples in transaction : 9, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 6)</error>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-2161&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-2161"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&lt;meta name=&quot;ajs-issue-key&quot; content=&quot;AAFAIA-3209&quot;&gt;/" type="Assertion Failure">Test failed: text expected to contain /&lt;meta name="ajs-issue-key" content="AAFAIA-3209"&gt;/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_kanban_board">
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:18,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":18,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:11,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":11,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:32,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":32,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:25,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":25,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <error message="Number of samples in transaction : 10, number of failing samples : 2" type="Error">Number of samples in transaction : 10, number of failing samples : 2
+(status code is 400)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 1" type="Error">Number of samples in transaction : 10, number of failing samples : 1
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_project_summary">
+      <failure message="Test failed: text expected to contain /[&quot;project-key&quot;]=&quot;\&quot;BISN\&quot;&quot;;/" type="Assertion Failure">Test failed: text expected to contain /["project-key"]="\"BISN\"";/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="jmeter_view_scrum_board">
+      <error message="Number of samples in transaction : 11, number of failing samples : 1" type="Error">Number of samples in transaction : 11, number of failing samples : 1
+(status code is 400)
+(total errors of this type: 2)</error>
+      <failure message="Test failed: text expected to contain /&quot;{\&quot;currentViewConfig\&quot;:{\&quot;id\&quot;:60,\&quot;/" type="Assertion Failure">Test failed: text expected to contain /"{\"currentViewConfig\":{\"id\":60,\"/
+(status code is 200)
+(total errors of this type: 1)</failure>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="selenium_a_login">
+      <error message="Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))" type="Error">Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+(status code is 500)
+(total errors of this type: 8)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="selenium_browse_boards_list"/>
+    <testcase classname="bzt-8759775589349" name="selenium_browse_projects_list"/>
+    <testcase classname="bzt-8759775589349" name="selenium_create_issue">
+      <error message="Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException()))" type="Error">Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException()))
+(status code is 400)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8759775589349" name="selenium_edit_issue"/>
+    <testcase classname="bzt-8759775589349" name="selenium_save_comment"/>
+    <testcase classname="bzt-8759775589349" name="selenium_search_jql"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_backlog_for_scrum_board"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_dashboard"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_issue"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_kanban_board"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_project_summary"/>
+    <testcase classname="bzt-8759775589349" name="selenium_view_scrum_board"/>
+    <testcase classname="bzt-8759775589349" name="selenium_z_log_out"/>
+  </testsuite>
+</testsuites>

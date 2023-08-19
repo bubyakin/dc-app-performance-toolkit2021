@@ -1,0 +1,16 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,App specific
+jmeter_login_and_view_dashboard,27,1130,1111,1175,1195,1521,1054,1634,0.0,False
+jmeter_view_issue,16,768,763,806,812,822,721,824,0.0,False
+jmeter_view_dashboard,3,633,627,645,647,649,623,649,0.0,False
+jmeter_search_jql,5,1475,1468,1555,1584,1607,1412,1613,0.0,False
+jmeter_view_scrum_board,3,682,693,707,708,710,644,710,0.0,False
+jmeter_view_backlog,2,1239,1239,1285,1291,1296,1181,1297,0.0,False
+jmeter_create_issue:open_quick_create,2,240,240,259,262,264,215,264,0.0,False
+jmeter_create_issue:fill_and_submit_issue_form,2,462,462,572,585,596,324,599,0.0,False
+jmeter_view_kanban_board,2,910,910,1064,1083,1098,717,1102,0.0,False
+jmeter_browse_projects,2,302,302,307,307,308,296,308,0.0,False
+jmeter_edit_issue:open_editor,1,1077,1077,1077,1077,1077,1077,1077,0.0,False
+jmeter_edit_issue:save_edit,1,1470,1470,1470,1470,1470,1470,1470,0.0,False
+jmeter_view_project_summary,1,769,769,769,769,769,769,769,0.0,False
+selenium_login:open_login_page,41,0,0,0,0,0,0,0,100.0,False
+selenium_login,41,0,0,0,0,0,0,0,100.0,False

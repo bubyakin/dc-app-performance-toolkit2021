@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="sample_labels" package_name="bzt">
+    <testcase classname="bzt-8764980314329" name="check_logged_in_as_default_user">
+      <error message="Service Temporarily Unavailable" type="Error">Service Temporarily Unavailable
+(status code is 503)
+(total errors of this type: 69)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="check_logged_in_as_specific_user">
+      <error message="Service Temporarily Unavailable" type="Error">Service Temporarily Unavailable
+(status code is 503)
+(total errors of this type: 24)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_add_comment:open_comment">
+      <error message="Number of samples in transaction : 6, number of failing samples : 6" type="Error">Number of samples in transaction : 6, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 10)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_add_comment:save_comment">
+      <error message="Number of samples in transaction : 8, number of failing samples : 5" type="Error">Number of samples in transaction : 8, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 8" type="Error">Number of samples in transaction : 8, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 10)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 7" type="Error">Number of samples in transaction : 8, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 6" type="Error">Number of samples in transaction : 8, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_app_specific_action">
+      <error message="Number of samples in transaction : 4, number of failing samples : 1" type="Error">Number of samples in transaction : 4, number of failing samples : 1
+(status code is 500)
+(total errors of this type: 135)</error>
+      <error message="Number of samples in transaction : 4, number of failing samples : 2" type="Error">Number of samples in transaction : 4, number of failing samples : 2
+(status code is 504)
+(total errors of this type: 9)</error>
+      <error message="Number of samples in transaction : 4, number of failing samples : 4" type="Error">Number of samples in transaction : 4, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 22)</error>
+      <error message="Number of samples in transaction : 4, number of failing samples : 3" type="Error">Number of samples in transaction : 4, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_browse_boards">
+      <error message="Number of samples in transaction : 5, number of failing samples : 5" type="Error">Number of samples in transaction : 5, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 4)</error>
+      <error message="Number of samples in transaction : 5, number of failing samples : 4" type="Error">Number of samples in transaction : 5, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_browse_projects">
+      <error message="Number of samples in transaction : 4, number of failing samples : 4" type="Error">Number of samples in transaction : 4, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 35)</error>
+      <error message="Number of samples in transaction : 4, number of failing samples : 3" type="Error">Number of samples in transaction : 4, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 6)</error>
+      <error message="Number of samples in transaction : 4, number of failing samples : 2" type="Error">Number of samples in transaction : 4, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_create_issue:fill_and_submit_issue_form">
+      <error message="Number of samples in transaction : 2, number of failing samples : 2" type="Error">Number of samples in transaction : 2, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 21)</error>
+      <error message="Number of samples in transaction : 2, number of failing samples : 1" type="Error">Number of samples in transaction : 2, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 9)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_create_issue:open_quick_create">
+      <error message="Number of samples in transaction : 3, number of failing samples : 2" type="Error">Number of samples in transaction : 3, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 3, number of failing samples : 3" type="Error">Number of samples in transaction : 3, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 17)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_edit_issue:open_editor">
+      <error message="Number of samples in transaction : 6, number of failing samples : 6" type="Error">Number of samples in transaction : 6, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 17)</error>
+      <error message="Number of samples in transaction : 6, number of failing samples : 4" type="Error">Number of samples in transaction : 6, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 6, number of failing samples : 1" type="Error">Number of samples in transaction : 6, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 6, number of failing samples : 3" type="Error">Number of samples in transaction : 6, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 6, number of failing samples : 5" type="Error">Number of samples in transaction : 6, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_edit_issue:save_edit">
+      <error message="Number of samples in transaction : 9, number of failing samples : 7" type="Error">Number of samples in transaction : 9, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 9" type="Error">Number of samples in transaction : 9, number of failing samples : 9
+(status code is 503)
+(total errors of this type: 24)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 6" type="Error">Number of samples in transaction : 9, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 8" type="Error">Number of samples in transaction : 9, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 4" type="Error">Number of samples in transaction : 9, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 2)</error>
+      <failure message="Test failed: text expected to contain /[AAFAIA-2869]/" type="Assertion Failure">Test failed: text expected to contain /[AAFAIA-2869]/
+(status code is 200)
+(total errors of this type: 1)</failure>
+      <error message="Number of samples in transaction : 9, number of failing samples : 1" type="Error">Number of samples in transaction : 9, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_login_and_view_dashboard">
+      <error message="Number of samples in transaction : 10, number of failing samples : 1" type="Error">Number of samples in transaction : 10, number of failing samples : 1
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 7)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_search_jql">
+      <error message="Number of samples in transaction : 14, number of failing samples : 1" type="Error">Number of samples in transaction : 14, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 18)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 3" type="Error">Number of samples in transaction : 11, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 4" type="Error">Number of samples in transaction : 11, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 7)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 11" type="Error">Number of samples in transaction : 11, number of failing samples : 11
+(status code is 503)
+(total errors of this type: 47)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 9" type="Error">Number of samples in transaction : 11, number of failing samples : 9
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 6" type="Error">Number of samples in transaction : 11, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 4" type="Error">Number of samples in transaction : 13, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 7)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 10" type="Error">Number of samples in transaction : 11, number of failing samples : 10
+(status code is 503)
+(total errors of this type: 6)</error>
+      <error message="Number of samples in transaction : 14, number of failing samples : 7" type="Error">Number of samples in transaction : 14, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 14, number of failing samples : 6" type="Error">Number of samples in transaction : 14, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 7" type="Error">Number of samples in transaction : 11, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 8" type="Error">Number of samples in transaction : 11, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 1" type="Error">Number of samples in transaction : 13, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 5" type="Error">Number of samples in transaction : 11, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_backlog">
+      <error message="Number of samples in transaction : 13, number of failing samples : 5" type="Error">Number of samples in transaction : 13, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 2" type="Error">Number of samples in transaction : 13, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 7, number of failing samples : 7" type="Error">Number of samples in transaction : 7, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 20)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 6" type="Error">Number of samples in transaction : 13, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 4" type="Error">Number of samples in transaction : 13, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 1" type="Error">Number of samples in transaction : 13, number of failing samples : 1
+(status code is 502)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 8" type="Error">Number of samples in transaction : 13, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 7, number of failing samples : 3" type="Error">Number of samples in transaction : 7, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 7, number of failing samples : 6" type="Error">Number of samples in transaction : 7, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 7, number of failing samples : 1" type="Error">Number of samples in transaction : 7, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 13, number of failing samples : 12" type="Error">Number of samples in transaction : 13, number of failing samples : 12
+(status code is 503)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_dashboard">
+      <error message="Number of samples in transaction : 8, number of failing samples : 1" type="Error">Number of samples in transaction : 8, number of failing samples : 1
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 107)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 2" type="Error">Number of samples in transaction : 8, number of failing samples : 2
+(status code is Non HTTP response code: org.apache.http.ConnectionClosedException)
+(total errors of this type: 4)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 8" type="Error">Number of samples in transaction : 8, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 39)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 6" type="Error">Number of samples in transaction : 8, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 16)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 7" type="Error">Number of samples in transaction : 8, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 5)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 4" type="Error">Number of samples in transaction : 8, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 5" type="Error">Number of samples in transaction : 8, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 14)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_issue">
+      <error message="Number of samples in transaction : 9, number of failing samples : 3" type="Error">Number of samples in transaction : 9, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 15)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 7" type="Error">Number of samples in transaction : 9, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 5)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 1" type="Error">Number of samples in transaction : 9, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 22)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 8" type="Error">Number of samples in transaction : 8, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 151)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 5" type="Error">Number of samples in transaction : 9, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 2" type="Error">Number of samples in transaction : 9, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 6)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 8" type="Error">Number of samples in transaction : 9, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 12)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 6" type="Error">Number of samples in transaction : 9, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 5)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 4" type="Error">Number of samples in transaction : 9, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 16)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 6" type="Error">Number of samples in transaction : 8, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 8, number of failing samples : 5" type="Error">Number of samples in transaction : 8, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_kanban_board">
+      <error message="Number of samples in transaction : 10, number of failing samples : 2" type="Error">Number of samples in transaction : 10, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 8" type="Error">Number of samples in transaction : 10, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 3" type="Error">Number of samples in transaction : 10, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 4)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 7" type="Error">Number of samples in transaction : 10, number of failing samples : 7
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 10" type="Error">Number of samples in transaction : 10, number of failing samples : 10
+(status code is 503)
+(total errors of this type: 30)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 5" type="Error">Number of samples in transaction : 10, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 5)</error>
+      <error message="Number of samples in transaction : 10, number of failing samples : 9" type="Error">Number of samples in transaction : 10, number of failing samples : 9
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_project_summary">
+      <error message="Number of samples in transaction : 9, number of failing samples : 2" type="Error">Number of samples in transaction : 9, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 9" type="Error">Number of samples in transaction : 9, number of failing samples : 9
+(status code is 503)
+(total errors of this type: 15)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 3" type="Error">Number of samples in transaction : 9, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="jmeter_view_scrum_board">
+      <error message="Number of samples in transaction : 11, number of failing samples : 1" type="Error">Number of samples in transaction : 11, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 2" type="Error">Number of samples in transaction : 11, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 3" type="Error">Number of samples in transaction : 9, number of failing samples : 3
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 9" type="Error">Number of samples in transaction : 9, number of failing samples : 9
+(status code is 503)
+(total errors of this type: 37)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 4" type="Error">Number of samples in transaction : 11, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 5" type="Error">Number of samples in transaction : 9, number of failing samples : 5
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 8" type="Error">Number of samples in transaction : 9, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 1" type="Error">Number of samples in transaction : 9, number of failing samples : 1
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 4" type="Error">Number of samples in transaction : 9, number of failing samples : 4
+(status code is 503)
+(total errors of this type: 3)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 6" type="Error">Number of samples in transaction : 11, number of failing samples : 6
+(status code is 503)
+(total errors of this type: 2)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 10" type="Error">Number of samples in transaction : 11, number of failing samples : 10
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 9, number of failing samples : 2" type="Error">Number of samples in transaction : 9, number of failing samples : 2
+(status code is 503)
+(total errors of this type: 1)</error>
+      <error message="Number of samples in transaction : 11, number of failing samples : 8" type="Error">Number of samples in transaction : 11, number of failing samples : 8
+(status code is 503)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="selenium_a_login">
+      <error message="Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))" type="Error">Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+(status code is 500)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="selenium_browse_boards_list"/>
+    <testcase classname="bzt-8764980314329" name="selenium_browse_projects_list"/>
+    <testcase classname="bzt-8764980314329" name="selenium_create_issue"/>
+    <testcase classname="bzt-8764980314329" name="selenium_edit_issue"/>
+    <testcase classname="bzt-8764980314329" name="selenium_save_comment"/>
+    <testcase classname="bzt-8764980314329" name="selenium_search_jql">
+      <error message="Exception: ('Failed measure: selenium_search_jql - TimeoutException', TimeoutException())" type="Error">Exception: ('Failed measure: selenium_search_jql - TimeoutException', TimeoutException())
+(status code is 400)
+(total errors of this type: 2)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="selenium_view_backlog_for_scrum_board">
+      <error message="Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException())" type="Error">Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException())
+(status code is 400)
+(total errors of this type: 1)</error>
+    </testcase>
+    <testcase classname="bzt-8764980314329" name="selenium_view_dashboard"/>
+    <testcase classname="bzt-8764980314329" name="selenium_view_issue"/>
+    <testcase classname="bzt-8764980314329" name="selenium_view_kanban_board"/>
+    <testcase classname="bzt-8764980314329" name="selenium_view_project_summary"/>
+    <testcase classname="bzt-8764980314329" name="selenium_view_scrum_board"/>
+    <testcase classname="bzt-8764980314329" name="selenium_z_log_out"/>
+  </testsuite>
+</testsuites>

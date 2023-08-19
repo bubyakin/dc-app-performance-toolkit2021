@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="262" lt="0" ts="1692263842016" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-7" dt="" de="" by="17802" ng="39" na="39">
+  <httpSample t="91" lt="91" ts="1692263842017" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-7" dt="text" de="UTF-8" by="12138" ng="38" na="38">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:22 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17341x2
+X-ASESSIONID: 68o9mo
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="59" lt="59" ts="1692263842209" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-7" dt="text" de="UTF-8" by="2517" ng="38" na="38">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:22 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17354x1
+X-ASESSIONID: 68o9mo
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 52
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_71388ea42bc2d34763fb5a69b4457d83cb007201_lin; JSESSIONID=E514774901D262AB90305DAC7E3CD972</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Billet420&quot;, &quot;newName&quot;:&quot;test_YPJB8138&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263842302" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-7" dt="text" de="UTF-8" by="2517" ng="39" na="39">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:22 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17360x4
+X-ASESSIONID: 68o9mo
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 52
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_71388ea42bc2d34763fb5a69b4457d83cb007201_lin; JSESSIONID=E514774901D262AB90305DAC7E3CD972</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Billet420&quot;, &quot;newName&quot;:&quot;test_YPJB8138&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="57" lt="57" ts="1692263842357" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-7" dt="text" de="UTF-8" by="630" ng="39" na="39">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:22 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17361x3
+X-ASESSIONID: 68o9mo
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_YPJB8138&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_71388ea42bc2d34763fb5a69b4457d83cb007201_lin; JSESSIONID=E514774901D262AB90305DAC7E3CD972</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_YPJB8138</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="231" lt="0" ts="1692263851145" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-17" dt="" de="" by="17787" ng="48" na="48">
+  <httpSample t="68" lt="68" ts="1692263851145" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-17" dt="text" de="UTF-8" by="12139" ng="48" na="48">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17891x1
+X-ASESSIONID: 1a3evha
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263851216" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-17" dt="text" de="UTF-8" by="2518" ng="48" na="48">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17900x3
+X-ASESSIONID: 1a3evha
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 58
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a5b0ce04bfc248cd8836e873be021aac70c40f8f_lin; JSESSIONID=0509D1B60F4F14A7D4664C9406D86630</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Amphitheatres49&quot;, &quot;newName&quot;:&quot;test_LJQA7867&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263851271" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-17" dt="text" de="UTF-8" by="2518" ng="48" na="48">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17906x3
+X-ASESSIONID: 1a3evha
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 58
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a5b0ce04bfc248cd8836e873be021aac70c40f8f_lin; JSESSIONID=0509D1B60F4F14A7D4664C9406D86630</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Amphitheatres49&quot;, &quot;newName&quot;:&quot;test_LJQA7867&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263851326" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-17" dt="text" de="UTF-8" by="612" ng="48" na="48">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x17910x3
+X-ASESSIONID: 1a3evha
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_LJQA7867&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a5b0ce04bfc248cd8836e873be021aac70c40f8f_lin; JSESSIONID=0509D1B60F4F14A7D4664C9406D86630</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_LJQA7867</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="225" lt="0" ts="1692263854148" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-21" dt="" de="" by="17787" ng="51" na="51">
+  <httpSample t="66" lt="66" ts="1692263854148" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-21" dt="text" de="UTF-8" by="12139" ng="51" na="51">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:34 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18124x1
+X-ASESSIONID: 1615svp
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692263854216" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-21" dt="text" de="UTF-8" by="2518" ng="51" na="51">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:34 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18129x1
+X-ASESSIONID: 1615svp
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 55
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_f574055ba2f1806c1837b731d8006e20b91d7e8d_lin; JSESSIONID=EE60D3140882C1C644C3DEA3EABE630A</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Bayonne&apos;s853&quot;, &quot;newName&quot;:&quot;test_CCHP9966&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692263854270" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-21" dt="text" de="UTF-8" by="2518" ng="51" na="51">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:34 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18133x2
+X-ASESSIONID: 1615svp
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 55
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_f574055ba2f1806c1837b731d8006e20b91d7e8d_lin; JSESSIONID=EE60D3140882C1C644C3DEA3EABE630A</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Bayonne&apos;s853&quot;, &quot;newName&quot;:&quot;test_CCHP9966&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692263854323" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-21" dt="text" de="UTF-8" by="612" ng="51" na="51">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:34 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18134x1
+X-ASESSIONID: 1615svp
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_CCHP9966&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_f574055ba2f1806c1837b731d8006e20b91d7e8d_lin; JSESSIONID=EE60D3140882C1C644C3DEA3EABE630A</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_CCHP9966</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="235" lt="0" ts="1692263857925" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-40" dt="" de="" by="17802" ng="55" na="55">
+  <httpSample t="70" lt="70" ts="1692263857925" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-40" dt="text" de="UTF-8" by="12138" ng="55" na="55">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:37 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18351x2
+X-ASESSIONID: ii7ijm
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="56" lt="56" ts="1692263857996" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-40" dt="text" de="UTF-8" by="2517" ng="55" na="55">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:38 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18357x2
+X-ASESSIONID: ii7ijm
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 53
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e3e9ee544d82d6af848dee48378c9f5decd1a9c9_lin; JSESSIONID=91696DF19EF428F68737E37730E76ACC</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Bloating90&quot;, &quot;newName&quot;:&quot;test_XMHZ9976&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="56" lt="56" ts="1692263858052" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-40" dt="text" de="UTF-8" by="2517" ng="55" na="55">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:38 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18362x4
+X-ASESSIONID: ii7ijm
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 53
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e3e9ee544d82d6af848dee48378c9f5decd1a9c9_lin; JSESSIONID=91696DF19EF428F68737E37730E76ACC</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Bloating90&quot;, &quot;newName&quot;:&quot;test_XMHZ9976&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692263858108" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-40" dt="text" de="UTF-8" by="630" ng="55" na="55">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:38 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x18365x2
+X-ASESSIONID: ii7ijm
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_XMHZ9976&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e3e9ee544d82d6af848dee48378c9f5decd1a9c9_lin; JSESSIONID=91696DF19EF428F68737E37730E76ACC</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_XMHZ9976</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="227" lt="0" ts="1692263875362" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-15" dt="" de="" by="17801" ng="75" na="75">
+  <httpSample t="65" lt="65" ts="1692263875362" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-15" dt="text" de="UTF-8" by="12156" ng="75" na="75">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:55 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19717x2
+X-ASESSIONID: ezwi45
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263875428" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-15" dt="text" de="UTF-8" by="2517" ng="75" na="75">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:55 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19723x1
+X-ASESSIONID: ezwi45
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 56
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_0f98483aa04073e3602a78160dc076598d944ac4_lin; JSESSIONID=6EFF947113E4B3B429040F47F2714A4A</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Coxswain&apos;s765&quot;, &quot;newName&quot;:&quot;test_XKBB3465&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263875482" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-15" dt="text" de="UTF-8" by="2517" ng="75" na="75">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:55 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19730x3
+X-ASESSIONID: ezwi45
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 56
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_0f98483aa04073e3602a78160dc076598d944ac4_lin; JSESSIONID=6EFF947113E4B3B429040F47F2714A4A</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Coxswain&apos;s765&quot;, &quot;newName&quot;:&quot;test_XKBB3465&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263875536" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-15" dt="text" de="UTF-8" by="611" ng="75" na="75">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:55 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19734x2
+X-ASESSIONID: ezwi45
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_XKBB3465&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_0f98483aa04073e3602a78160dc076598d944ac4_lin; JSESSIONID=6EFF947113E4B3B429040F47F2714A4A</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_XKBB3465</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="232" lt="0" ts="1692263876255" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-45" dt="" de="" by="17783" ng="76" na="76">
+  <httpSample t="67" lt="66" ts="1692263876255" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-45" dt="text" de="UTF-8" by="12138" ng="76" na="76">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:56 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19785x3
+X-ASESSIONID: cs8ve6
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263876323" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-45" dt="text" de="UTF-8" by="2517" ng="76" na="76">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:56 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19792x4
+X-ASESSIONID: cs8ve6
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 57
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e9ce8d8950370628d1ab8fa4569c23fe3c17b300_lin; JSESSIONID=E8A55874D6304CDFF9649095F390C2AF</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Blackbird&apos;s925&quot;, &quot;newName&quot;:&quot;test_PJYY9928&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263876379" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-45" dt="text" de="UTF-8" by="2517" ng="76" na="76">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:56 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19797x4
+X-ASESSIONID: cs8ve6
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 57
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e9ce8d8950370628d1ab8fa4569c23fe3c17b300_lin; JSESSIONID=E8A55874D6304CDFF9649095F390C2AF</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Blackbird&apos;s925&quot;, &quot;newName&quot;:&quot;test_PJYY9928&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263876434" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-45" dt="text" de="UTF-8" by="611" ng="76" na="76">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:56 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19805x2
+X-ASESSIONID: cs8ve6
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_PJYY9928&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e9ce8d8950370628d1ab8fa4569c23fe3c17b300_lin; JSESSIONID=E8A55874D6304CDFF9649095F390C2AF</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_PJYY9928</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="236" lt="0" ts="1692263878609" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-4" dt="" de="" by="17779" ng="79" na="79">
+  <httpSample t="71" lt="71" ts="1692263878609" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-4" dt="text" de="UTF-8" by="12137" ng="79" na="79">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:58 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x19999x4
+X-ASESSIONID: mevzz
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 11604
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263878681" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-4" dt="text" de="UTF-8" by="2516" ng="79" na="79">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:58 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20003x4
+X-ASESSIONID: mevzz
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 51
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_749349dadcae661de7bf346644e548969ae373e1_lin; JSESSIONID=330E0963916A2FF48EA93AB766591BFD</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Casey655&quot;, &quot;newName&quot;:&quot;test_YMKW5655&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263878737" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-4" dt="text" de="UTF-8" by="2516" ng="79" na="79">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:58 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20008x6
+X-ASESSIONID: mevzz
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 51
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_749349dadcae661de7bf346644e548969ae373e1_lin; JSESSIONID=330E0963916A2FF48EA93AB766591BFD</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Casey655&quot;, &quot;newName&quot;:&quot;test_YMKW5655&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692263878792" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-4" dt="text" de="UTF-8" by="610" ng="79" na="79">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:58 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20012x5
+X-ASESSIONID: mevzz
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_YMKW5655&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_749349dadcae661de7bf346644e548969ae373e1_lin; JSESSIONID=330E0963916A2FF48EA93AB766591BFD</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_YMKW5655</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="230" lt="0" ts="1692263879530" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 3" tn="Jira 1-19" dt="" de="" by="17820" ng="80" na="80">
+  <httpSample t="70" lt="70" ts="1692263879530" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-19" dt="text" de="UTF-8" by="12156" ng="79" na="79">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:59 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20083x2
+X-ASESSIONID: i0fcxd
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692263879601" s="false" lb="Check Renaming" rc="404" rm="" tn="Jira 1-19" dt="text" de="UTF-8" by="2517" ng="79" na="79">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>Expected to find an object with property [&apos;success&apos;] in path $ but found &apos;java.lang.String&apos;. This is not a json object according to the JsonProvider: &apos;com.jayway.jsonpath.spi.json.JsonSmartJsonProvider&apos;.</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:59 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20090x2
+X-ASESSIONID: i0fcxd
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 54
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a68cced42861ee1c80d86af0c094310e9a3477ae_lin; JSESSIONID=BE3CD23703E4B4AC84296280BE821EB9</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Coolants574&quot;, &quot;newName&quot;:&quot;test_UFWI4420&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263879654" s="false" lb="Rename" rc="404" rm="" tn="Jira 1-19" dt="text" de="UTF-8" by="2517" ng="80" na="80">
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Content-Security-Policy: frame-ancestors &apos;self&apos;
+Content-Type: text/html;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:59 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20096x2
+X-ASESSIONID: i0fcxd
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 2025
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 54
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&lt;title&gt;Oops, you&amp;#39;ve found a dead link. - JIRA&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;contextPath = &quot;/jira&quot;;&lt;/script&gt;&lt;link type=&apos;text/css&apos; rel=&apos;stylesheet&apos; href=&apos;/jira/static-assets/metal-all.css&apos; media=&apos;all&apos;&gt;&lt;script src=&apos;/jira/static-assets/jquery-min.js&apos;&gt;&lt;/script&gt;&lt;script src=&apos;/jira/static-assets/metal-all.js&apos;&gt;&lt;/script&gt;&lt;meta name=&quot;decorator&quot; content=&quot;none&quot; /&gt;&lt;/head&gt;&lt;body class=&quot; error-page error404&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.body.className += &quot; js-enabled&quot;;&lt;/script&gt;&lt;div id=&quot;page&quot;&gt;&lt;header id=&quot;header&quot; role=&quot;banner&quot; aria-label=&quot;Site&quot;&gt;&lt;/header&gt;&lt;div id=&quot;content&quot;&gt;&lt;div class=&quot;aui-page-panel&quot; &gt;&lt;div class=&quot;aui-page-panel-inner&quot;&gt;&lt;main role=&quot;main&quot; id=&quot;main&quot; class=&quot;aui-page-panel-content lowerContent&quot; &gt;&lt;div id=&quot;error-state&quot;&gt;&lt;span class=&quot;error-type&quot;&gt;&lt;/span&gt;&lt;h1&gt;Oops, you&amp;#39;ve found a dead link.&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Go back to the &lt;a href=&quot;javascript:window.history.back()&quot;&gt;previous page&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Go to the &lt;a href=&quot;/jira/secure/MyJiraHome.jspa&quot;&gt;Home Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/main&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&lt;section class=&quot;footer-body&quot;&gt;&lt;ul class=&quot;atlassian-footer&quot;&gt;
+    &lt;li&gt;
+        Atlassian Jira &lt;a class=&quot;seo-link&quot; rel=&quot;nofollow&quot; href=&quot;https://www.atlassian.com/software/jira&quot;&gt;Project Management Software&lt;/a&gt;
+            &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;about-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/AboutPage.jspa/secure/AboutPage.jspa&quot;&gt;About Jira&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a id=&quot;footer-report-problem-link&quot; rel=&quot;nofollow&quot; href=&quot;/jira/secure/CreateIssue!default.jspa&quot;&gt;Report a problem&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+    &lt;p class=&quot;atlassian-footer&quot;&gt;
+        &lt;span class=&quot;licensemessage&quot;&gt;
+                This &lt;a rel=&apos;nofollow&apos; href=&apos;http://www.atlassian.com/software/jira&apos;&gt;Jira&lt;/a&gt; site is for non-production use only.
+
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;div id=&quot;footer-logo&quot;&gt;&lt;a href=&quot;http://www.atlassian.com/&quot; rel=&quot;nofollow&quot;&gt;Atlassian&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a68cced42861ee1c80d86af0c094310e9a3477ae_lin; JSESSIONID=BE3CD23703E4B4AC84296280BE821EB9</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;Coolants574&quot;, &quot;newName&quot;:&quot;test_UFWI4420&quot;}</queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692263879708" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-19" dt="text" de="UTF-8" by="630" ng="80" na="80">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 17 Aug 2023 09:17:59 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 557x20102x4
+X-ASESSIONID: i0fcxd
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_UFWI4420&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=7ed74a0605bc0f2046d02899587a8fd2|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_a68cced42861ee1c80d86af0c094310e9a3477ae_lin; JSESSIONID=BE3CD23703E4B4AC84296280BE821EB9</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ad0f0724a6cfe4f4b8abe0cfad61b812-1087608495.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_UFWI4420</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+
+</testResults>

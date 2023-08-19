@@ -1,0 +1,650 @@
+08-17-2023, 15:02:39, 1692284559966, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209714', 'issue_key': 'AAFAIA-4206', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692284472.8233418
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692284559.9287906
+timing = '87105'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:08:35, 1692284915714, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208374', 'issue_key': 'AAFAIA-2866', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692284835.3016543
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692284915.6800396
+timing = '80378'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:12:21, 1692285141716, Action: test_1_selenium_create_issue, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '211728', 'issue_key': 'AAFAIA-6220', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_create_issue(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.create_issue(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:127: in create_issue
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692285121.42198
+error_msg = 'Failed measure: selenium_create_issue - Exception'
+full_exception = Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692285141.7029712
+timing = '20280'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:20:08, 1692285608505, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '206702', 'issue_key': 'AAFAIA-1194', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692285524.6340547
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692285608.4926753
+timing = '83858'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:23:48, 1692285828696, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209045', 'issue_key': 'AAFAIA-3537', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692285747.0254526
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692285828.66012
+timing = '81634'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:26:16, 1692285976176, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209827', 'issue_key': 'AAFAIA-4319', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692285889.3596969
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692285976.1631618
+timing = '86803'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:28:41, 1692286121220, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209876', 'issue_key': 'AAFAIA-4368', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692286036.845152
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692286121.2070072
+timing = '84361'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:32:53, 1692286373840, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209829', 'issue_key': 'AAFAIA-4321', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692286293.4143255
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692286373.8264408
+timing = '80412'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:35:20, 1692286520792, Action: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '212517', 'issue_key': 'AAFAIA-7009', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692286434.548735
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692286520.7796376
+timing = '86230'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 15:39:30, 1692286770655, Action: test_1_selenium_create_issue, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4137db9d14a047a505e07aeb5570850a")>
+jira_datasets = {'custom_issues': [], 'issue_id': '211066', 'issue_key': 'AAFAIA-5558', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_create_issue(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.create_issue(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:127: in create_issue
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692286750.4114985
+error_msg = 'Failed measure: selenium_create_issue - Exception'
+full_exception = Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692286770.6417537
+timing = '20230'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_14-54-59/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_create_issue - Exception', Exception('Failed measure: selenium_create_issue:open_quick_create - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception

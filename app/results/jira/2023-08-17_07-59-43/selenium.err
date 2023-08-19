@@ -1,0 +1,2665 @@
+08-17-2023, 08:00:16, 1692259216075, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...559e81e436b8 <unknown>\n#16 0x559e81e43847 <unknown>\n#17 0x559e81e53243 <unknown>\n#18 0x7f1b6b5ecea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '915428', 'issue_key': 'AABIS-864', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259216.0173814
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...59e81e436b8 <unknown>\n#16 0x559e81e43847 <unknown>\n#17 0x559e81e53243 <unknown>\n#18 0x7f1b6b5ecea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259216.0176961
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x559e81e5a4e3 <unknown>\n#1 0x559e81b89c76 <unknown>\n#2 0x559e81bb704a <unknown>\n#3 0x559e81bb24a1 <unknown>\n#4 0x559e81baf029 <unknown>\n#5 0x559e81bedccc <unknown>\n#6 0x559e81bed47f <unknown>\n#7 0x559e81be4de3 <unknown>\n#8 0x559e81bba2dd <unknown>\n#9 0x559e81bbb34e <unknown>\n#10 0x559e81e1a3e4 <unknown>\n#11 0x559e81e1e3d7 <unknown>\n#12 0x559e81e28b20 <unknown>\n#13 0x559e81e1f023 <unknown>\n#14 0x559e81ded1aa <unknown>\n#15 0x559e81e436b8 <unknown>\n#16 0x559e81e43847 <unknown>\n#17 0x559e81e53243 <unknown>\n#18 0x7f1b6b5ecea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:16, 1692259216858, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f801cfd6b8 <unknown>\n#16 0x55f801cfd847 <unknown>\n#17 0x55f801d0d243 <unknown>\n#18 0x7f85c85deea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206922', 'issue_key': 'AAFAIA-1414', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259216.8448045
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f801cfd6b8 <unknown>\n#16 0x55f801cfd847 <unknown>\n#17 0x55f801d0d243 <unknown>\n#18 0x7f85c85deea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259216.845034
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f801d144e3 <unknown>\n#1 0x55f801a43c76 <unknown>\n#2 0x55f801a7104a <unknown>\n#3 0x55f801a6c4a1 <unknown>\n#4 0x55f801a69029 <unknown>\n#5 0x55f801aa7ccc <unknown>\n#6 0x55f801aa747f <unknown>\n#7 0x55f801a9ede3 <unknown>\n#8 0x55f801a742dd <unknown>\n#9 0x55f801a7534e <unknown>\n#10 0x55f801cd43e4 <unknown>\n#11 0x55f801cd83d7 <unknown>\n#12 0x55f801ce2b20 <unknown>\n#13 0x55f801cd9023 <unknown>\n#14 0x55f801ca71aa <unknown>\n#15 0x55f801cfd6b8 <unknown>\n#16 0x55f801cfd847 <unknown>\n#17 0x55f801d0d243 <unknown>\n#18 0x7f85c85deea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:17, 1692259217574, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55a9ff6bd6b8 <unknown>\n#16 0x55a9ff6bd847 <unknown>\n#17 0x55a9ff6cd243 <unknown>\n#18 0x7f461ae03ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206084', 'issue_key': 'AAFAIA-576', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259217.5612805
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5a9ff6bd6b8 <unknown>\n#16 0x55a9ff6bd847 <unknown>\n#17 0x55a9ff6cd243 <unknown>\n#18 0x7f461ae03ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259217.5614882
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55a9ff6d44e3 <unknown>\n#1 0x55a9ff403c76 <unknown>\n#2 0x55a9ff43104a <unknown>\n#3 0x55a9ff42c4a1 <unknown>\n#4 0x55a9ff429029 <unknown>\n#5 0x55a9ff467ccc <unknown>\n#6 0x55a9ff46747f <unknown>\n#7 0x55a9ff45ede3 <unknown>\n#8 0x55a9ff4342dd <unknown>\n#9 0x55a9ff43534e <unknown>\n#10 0x55a9ff6943e4 <unknown>\n#11 0x55a9ff6983d7 <unknown>\n#12 0x55a9ff6a2b20 <unknown>\n#13 0x55a9ff699023 <unknown>\n#14 0x55a9ff6671aa <unknown>\n#15 0x55a9ff6bd6b8 <unknown>\n#16 0x55a9ff6bd847 <unknown>\n#17 0x55a9ff6cd243 <unknown>\n#18 0x7f461ae03ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:18, 1692259218285, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...561bcf3656b8 <unknown>\n#16 0x561bcf365847 <unknown>\n#17 0x561bcf375243 <unknown>\n#18 0x7fdd40ea9ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '208395', 'issue_key': 'AAFAIA-2887', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259218.2673385
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...61bcf3656b8 <unknown>\n#16 0x561bcf365847 <unknown>\n#17 0x561bcf375243 <unknown>\n#18 0x7fdd40ea9ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259218.26761
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x561bcf37c4e3 <unknown>\n#1 0x561bcf0abc76 <unknown>\n#2 0x561bcf0d904a <unknown>\n#3 0x561bcf0d44a1 <unknown>\n#4 0x561bcf0d1029 <unknown>\n#5 0x561bcf10fccc <unknown>\n#6 0x561bcf10f47f <unknown>\n#7 0x561bcf106de3 <unknown>\n#8 0x561bcf0dc2dd <unknown>\n#9 0x561bcf0dd34e <unknown>\n#10 0x561bcf33c3e4 <unknown>\n#11 0x561bcf3403d7 <unknown>\n#12 0x561bcf34ab20 <unknown>\n#13 0x561bcf341023 <unknown>\n#14 0x561bcf30f1aa <unknown>\n#15 0x561bcf3656b8 <unknown>\n#16 0x561bcf365847 <unknown>\n#17 0x561bcf375243 <unknown>\n#18 0x7fdd40ea9ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:19, 1692259219051, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55602d3c26b8 <unknown>\n#16 0x55602d3c2847 <unknown>\n#17 0x55602d3d2243 <unknown>\n#18 0x7f84b877bea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '207194', 'issue_key': 'AAFAIA-1686', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259219.0377748
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5602d3c26b8 <unknown>\n#16 0x55602d3c2847 <unknown>\n#17 0x55602d3d2243 <unknown>\n#18 0x7f84b877bea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259219.0379689
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55602d3d94e3 <unknown>\n#1 0x55602d108c76 <unknown>\n#2 0x55602d13604a <unknown>\n#3 0x55602d1314a1 <unknown>\n#4 0x55602d12e029 <unknown>\n#5 0x55602d16cccc <unknown>\n#6 0x55602d16c47f <unknown>\n#7 0x55602d163de3 <unknown>\n#8 0x55602d1392dd <unknown>\n#9 0x55602d13a34e <unknown>\n#10 0x55602d3993e4 <unknown>\n#11 0x55602d39d3d7 <unknown>\n#12 0x55602d3a7b20 <unknown>\n#13 0x55602d39e023 <unknown>\n#14 0x55602d36c1aa <unknown>\n#15 0x55602d3c26b8 <unknown>\n#16 0x55602d3c2847 <unknown>\n#17 0x55602d3d2243 <unknown>\n#18 0x7f84b877bea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:19, 1692259219767, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f5dc6d26b8 <unknown>\n#16 0x55f5dc6d2847 <unknown>\n#17 0x55f5dc6e2243 <unknown>\n#18 0x7f375a14cea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '205583', 'issue_key': 'AAFAIA-75', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259219.7538054
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f5dc6d26b8 <unknown>\n#16 0x55f5dc6d2847 <unknown>\n#17 0x55f5dc6e2243 <unknown>\n#18 0x7f375a14cea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259219.7540073
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f5dc6e94e3 <unknown>\n#1 0x55f5dc418c76 <unknown>\n#2 0x55f5dc44604a <unknown>\n#3 0x55f5dc4414a1 <unknown>\n#4 0x55f5dc43e029 <unknown>\n#5 0x55f5dc47cccc <unknown>\n#6 0x55f5dc47c47f <unknown>\n#7 0x55f5dc473de3 <unknown>\n#8 0x55f5dc4492dd <unknown>\n#9 0x55f5dc44a34e <unknown>\n#10 0x55f5dc6a93e4 <unknown>\n#11 0x55f5dc6ad3d7 <unknown>\n#12 0x55f5dc6b7b20 <unknown>\n#13 0x55f5dc6ae023 <unknown>\n#14 0x55f5dc67c1aa <unknown>\n#15 0x55f5dc6d26b8 <unknown>\n#16 0x55f5dc6d2847 <unknown>\n#17 0x55f5dc6e2243 <unknown>\n#18 0x7f375a14cea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:20, 1692259220478, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f8d03386b8 <unknown>\n#16 0x55f8d0338847 <unknown>\n#17 0x55f8d0348243 <unknown>\n#18 0x7fa752eb8ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211255', 'issue_key': 'AAFAIA-5747', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259220.4634519
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f8d03386b8 <unknown>\n#16 0x55f8d0338847 <unknown>\n#17 0x55f8d0348243 <unknown>\n#18 0x7fa752eb8ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259220.4636514
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f8d034f4e3 <unknown>\n#1 0x55f8d007ec76 <unknown>\n#2 0x55f8d00ac04a <unknown>\n#3 0x55f8d00a74a1 <unknown>\n#4 0x55f8d00a4029 <unknown>\n#5 0x55f8d00e2ccc <unknown>\n#6 0x55f8d00e247f <unknown>\n#7 0x55f8d00d9de3 <unknown>\n#8 0x55f8d00af2dd <unknown>\n#9 0x55f8d00b034e <unknown>\n#10 0x55f8d030f3e4 <unknown>\n#11 0x55f8d03133d7 <unknown>\n#12 0x55f8d031db20 <unknown>\n#13 0x55f8d0314023 <unknown>\n#14 0x55f8d02e21aa <unknown>\n#15 0x55f8d03386b8 <unknown>\n#16 0x55f8d0338847 <unknown>\n#17 0x55f8d0348243 <unknown>\n#18 0x7fa752eb8ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:21, 1692259221230, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...560c0a35f6b8 <unknown>\n#16 0x560c0a35f847 <unknown>\n#17 0x560c0a36f243 <unknown>\n#18 0x7fa2bd593ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '205560', 'issue_key': 'AAFAIA-52', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259221.2173595
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...60c0a35f6b8 <unknown>\n#16 0x560c0a35f847 <unknown>\n#17 0x560c0a36f243 <unknown>\n#18 0x7fa2bd593ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259221.2175632
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x560c0a3764e3 <unknown>\n#1 0x560c0a0a5c76 <unknown>\n#2 0x560c0a0d304a <unknown>\n#3 0x560c0a0ce4a1 <unknown>\n#4 0x560c0a0cb029 <unknown>\n#5 0x560c0a109ccc <unknown>\n#6 0x560c0a10947f <unknown>\n#7 0x560c0a100de3 <unknown>\n#8 0x560c0a0d62dd <unknown>\n#9 0x560c0a0d734e <unknown>\n#10 0x560c0a3363e4 <unknown>\n#11 0x560c0a33a3d7 <unknown>\n#12 0x560c0a344b20 <unknown>\n#13 0x560c0a33b023 <unknown>\n#14 0x560c0a3091aa <unknown>\n#15 0x560c0a35f6b8 <unknown>\n#16 0x560c0a35f847 <unknown>\n#17 0x560c0a36f243 <unknown>\n#18 0x7fa2bd593ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:21, 1692259221939, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55e38dcb36b8 <unknown>\n#16 0x55e38dcb3847 <unknown>\n#17 0x55e38dcc3243 <unknown>\n#18 0x7f0c75ab2ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211132', 'issue_key': 'AAFAIA-5624', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259221.9265063
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5e38dcb36b8 <unknown>\n#16 0x55e38dcb3847 <unknown>\n#17 0x55e38dcc3243 <unknown>\n#18 0x7f0c75ab2ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259221.9267
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55e38dcca4e3 <unknown>\n#1 0x55e38d9f9c76 <unknown>\n#2 0x55e38da2704a <unknown>\n#3 0x55e38da224a1 <unknown>\n#4 0x55e38da1f029 <unknown>\n#5 0x55e38da5dccc <unknown>\n#6 0x55e38da5d47f <unknown>\n#7 0x55e38da54de3 <unknown>\n#8 0x55e38da2a2dd <unknown>\n#9 0x55e38da2b34e <unknown>\n#10 0x55e38dc8a3e4 <unknown>\n#11 0x55e38dc8e3d7 <unknown>\n#12 0x55e38dc98b20 <unknown>\n#13 0x55e38dc8f023 <unknown>\n#14 0x55e38dc5d1aa <unknown>\n#15 0x55e38dcb36b8 <unknown>\n#16 0x55e38dcb3847 <unknown>\n#17 0x55e38dcc3243 <unknown>\n#18 0x7f0c75ab2ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:22, 1692259222668, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f8045fa6b8 <unknown>\n#16 0x55f8045fa847 <unknown>\n#17 0x55f80460a243 <unknown>\n#18 0x7f13dfb79ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '207050', 'issue_key': 'AAFAIA-1542', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259222.6548574
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f8045fa6b8 <unknown>\n#16 0x55f8045fa847 <unknown>\n#17 0x55f80460a243 <unknown>\n#18 0x7f13dfb79ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259222.65505
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f8046114e3 <unknown>\n#1 0x55f804340c76 <unknown>\n#2 0x55f80436e04a <unknown>\n#3 0x55f8043694a1 <unknown>\n#4 0x55f804366029 <unknown>\n#5 0x55f8043a4ccc <unknown>\n#6 0x55f8043a447f <unknown>\n#7 0x55f80439bde3 <unknown>\n#8 0x55f8043712dd <unknown>\n#9 0x55f80437234e <unknown>\n#10 0x55f8045d13e4 <unknown>\n#11 0x55f8045d53d7 <unknown>\n#12 0x55f8045dfb20 <unknown>\n#13 0x55f8045d6023 <unknown>\n#14 0x55f8045a41aa <unknown>\n#15 0x55f8045fa6b8 <unknown>\n#16 0x55f8045fa847 <unknown>\n#17 0x55f80460a243 <unknown>\n#18 0x7f13dfb79ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:23, 1692259223382, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...563210f886b8 <unknown>\n#16 0x563210f88847 <unknown>\n#17 0x563210f98243 <unknown>\n#18 0x7f4734dceea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206886', 'issue_key': 'AAFAIA-1378', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259223.3694677
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...63210f886b8 <unknown>\n#16 0x563210f88847 <unknown>\n#17 0x563210f98243 <unknown>\n#18 0x7f4734dceea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259223.3696632
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x563210f9f4e3 <unknown>\n#1 0x563210ccec76 <unknown>\n#2 0x563210cfc04a <unknown>\n#3 0x563210cf74a1 <unknown>\n#4 0x563210cf4029 <unknown>\n#5 0x563210d32ccc <unknown>\n#6 0x563210d3247f <unknown>\n#7 0x563210d29de3 <unknown>\n#8 0x563210cff2dd <unknown>\n#9 0x563210d0034e <unknown>\n#10 0x563210f5f3e4 <unknown>\n#11 0x563210f633d7 <unknown>\n#12 0x563210f6db20 <unknown>\n#13 0x563210f64023 <unknown>\n#14 0x563210f321aa <unknown>\n#15 0x563210f886b8 <unknown>\n#16 0x563210f88847 <unknown>\n#17 0x563210f98243 <unknown>\n#18 0x7f4734dceea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:24, 1692259224116, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...56102525f6b8 <unknown>\n#16 0x56102525f847 <unknown>\n#17 0x56102526f243 <unknown>\n#18 0x7fa8383e6ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210931', 'issue_key': 'AAFAIA-5423', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259224.1032684
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...6102525f6b8 <unknown>\n#16 0x56102525f847 <unknown>\n#17 0x56102526f243 <unknown>\n#18 0x7fa8383e6ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259224.1034613
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5610252764e3 <unknown>\n#1 0x561024fa5c76 <unknown>\n#2 0x561024fd304a <unknown>\n#3 0x561024fce4a1 <unknown>\n#4 0x561024fcb029 <unknown>\n#5 0x561025009ccc <unknown>\n#6 0x56102500947f <unknown>\n#7 0x561025000de3 <unknown>\n#8 0x561024fd62dd <unknown>\n#9 0x561024fd734e <unknown>\n#10 0x5610252363e4 <unknown>\n#11 0x56102523a3d7 <unknown>\n#12 0x561025244b20 <unknown>\n#13 0x56102523b023 <unknown>\n#14 0x5610252091aa <unknown>\n#15 0x56102525f6b8 <unknown>\n#16 0x56102525f847 <unknown>\n#17 0x56102526f243 <unknown>\n#18 0x7fa8383e6ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:24, 1692259224830, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55a445a966b8 <unknown>\n#16 0x55a445a96847 <unknown>\n#17 0x55a445aa6243 <unknown>\n#18 0x7f48de383ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206129', 'issue_key': 'AAFAIA-621', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259224.817299
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5a445a966b8 <unknown>\n#16 0x55a445a96847 <unknown>\n#17 0x55a445aa6243 <unknown>\n#18 0x7f48de383ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259224.8174834
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55a445aad4e3 <unknown>\n#1 0x55a4457dcc76 <unknown>\n#2 0x55a44580a04a <unknown>\n#3 0x55a4458054a1 <unknown>\n#4 0x55a445802029 <unknown>\n#5 0x55a445840ccc <unknown>\n#6 0x55a44584047f <unknown>\n#7 0x55a445837de3 <unknown>\n#8 0x55a44580d2dd <unknown>\n#9 0x55a44580e34e <unknown>\n#10 0x55a445a6d3e4 <unknown>\n#11 0x55a445a713d7 <unknown>\n#12 0x55a445a7bb20 <unknown>\n#13 0x55a445a72023 <unknown>\n#14 0x55a445a401aa <unknown>\n#15 0x55a445a966b8 <unknown>\n#16 0x55a445a96847 <unknown>\n#17 0x55a445aa6243 <unknown>\n#18 0x7f48de383ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:25, 1692259225562, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5599d46186b8 <unknown>\n#16 0x5599d4618847 <unknown>\n#17 0x5599d4628243 <unknown>\n#18 0x7f4491085ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '207652', 'issue_key': 'AAFAIA-2144', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259225.548941
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...599d46186b8 <unknown>\n#16 0x5599d4618847 <unknown>\n#17 0x5599d4628243 <unknown>\n#18 0x7f4491085ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259225.5491977
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5599d462f4e3 <unknown>\n#1 0x5599d435ec76 <unknown>\n#2 0x5599d438c04a <unknown>\n#3 0x5599d43874a1 <unknown>\n#4 0x5599d4384029 <unknown>\n#5 0x5599d43c2ccc <unknown>\n#6 0x5599d43c247f <unknown>\n#7 0x5599d43b9de3 <unknown>\n#8 0x5599d438f2dd <unknown>\n#9 0x5599d439034e <unknown>\n#10 0x5599d45ef3e4 <unknown>\n#11 0x5599d45f33d7 <unknown>\n#12 0x5599d45fdb20 <unknown>\n#13 0x5599d45f4023 <unknown>\n#14 0x5599d45c21aa <unknown>\n#15 0x5599d46186b8 <unknown>\n#16 0x5599d4618847 <unknown>\n#17 0x5599d4628243 <unknown>\n#18 0x7f4491085ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:26, 1692259226283, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5580ab8f16b8 <unknown>\n#16 0x5580ab8f1847 <unknown>\n#17 0x5580ab901243 <unknown>\n#18 0x7fb5218a0ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211609', 'issue_key': 'AAFAIA-6101', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259226.249023
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...580ab8f16b8 <unknown>\n#16 0x5580ab8f1847 <unknown>\n#17 0x5580ab901243 <unknown>\n#18 0x7fb5218a0ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259226.2492158
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5580ab9084e3 <unknown>\n#1 0x5580ab637c76 <unknown>\n#2 0x5580ab66504a <unknown>\n#3 0x5580ab6604a1 <unknown>\n#4 0x5580ab65d029 <unknown>\n#5 0x5580ab69bccc <unknown>\n#6 0x5580ab69b47f <unknown>\n#7 0x5580ab692de3 <unknown>\n#8 0x5580ab6682dd <unknown>\n#9 0x5580ab66934e <unknown>\n#10 0x5580ab8c83e4 <unknown>\n#11 0x5580ab8cc3d7 <unknown>\n#12 0x5580ab8d6b20 <unknown>\n#13 0x5580ab8cd023 <unknown>\n#14 0x5580ab89b1aa <unknown>\n#15 0x5580ab8f16b8 <unknown>\n#16 0x5580ab8f1847 <unknown>\n#17 0x5580ab901243 <unknown>\n#18 0x7fb5218a0ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:26, 1692259226997, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55b6c2cb56b8 <unknown>\n#16 0x55b6c2cb5847 <unknown>\n#17 0x55b6c2cc5243 <unknown>\n#18 0x7fcc35a57ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206019', 'issue_key': 'AAFAIA-511', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259226.9840882
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5b6c2cb56b8 <unknown>\n#16 0x55b6c2cb5847 <unknown>\n#17 0x55b6c2cc5243 <unknown>\n#18 0x7fcc35a57ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259226.9842806
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55b6c2ccc4e3 <unknown>\n#1 0x55b6c29fbc76 <unknown>\n#2 0x55b6c2a2904a <unknown>\n#3 0x55b6c2a244a1 <unknown>\n#4 0x55b6c2a21029 <unknown>\n#5 0x55b6c2a5fccc <unknown>\n#6 0x55b6c2a5f47f <unknown>\n#7 0x55b6c2a56de3 <unknown>\n#8 0x55b6c2a2c2dd <unknown>\n#9 0x55b6c2a2d34e <unknown>\n#10 0x55b6c2c8c3e4 <unknown>\n#11 0x55b6c2c903d7 <unknown>\n#12 0x55b6c2c9ab20 <unknown>\n#13 0x55b6c2c91023 <unknown>\n#14 0x55b6c2c5f1aa <unknown>\n#15 0x55b6c2cb56b8 <unknown>\n#16 0x55b6c2cb5847 <unknown>\n#17 0x55b6c2cc5243 <unknown>\n#18 0x7fcc35a57ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:27, 1692259227703, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55d0318d36b8 <unknown>\n#16 0x55d0318d3847 <unknown>\n#17 0x55d0318e3243 <unknown>\n#18 0x7f5d6ba47ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '207329', 'issue_key': 'AAFAIA-1821', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259227.6894577
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5d0318d36b8 <unknown>\n#16 0x55d0318d3847 <unknown>\n#17 0x55d0318e3243 <unknown>\n#18 0x7f5d6ba47ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259227.6896527
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55d0318ea4e3 <unknown>\n#1 0x55d031619c76 <unknown>\n#2 0x55d03164704a <unknown>\n#3 0x55d0316424a1 <unknown>\n#4 0x55d03163f029 <unknown>\n#5 0x55d03167dccc <unknown>\n#6 0x55d03167d47f <unknown>\n#7 0x55d031674de3 <unknown>\n#8 0x55d03164a2dd <unknown>\n#9 0x55d03164b34e <unknown>\n#10 0x55d0318aa3e4 <unknown>\n#11 0x55d0318ae3d7 <unknown>\n#12 0x55d0318b8b20 <unknown>\n#13 0x55d0318af023 <unknown>\n#14 0x55d03187d1aa <unknown>\n#15 0x55d0318d36b8 <unknown>\n#16 0x55d0318d3847 <unknown>\n#17 0x55d0318e3243 <unknown>\n#18 0x7f5d6ba47ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:28, 1692259228412, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...564ad72216b8 <unknown>\n#16 0x564ad7221847 <unknown>\n#17 0x564ad7231243 <unknown>\n#18 0x7f65ea440ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '209514', 'issue_key': 'AAFAIA-4006', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259228.3989499
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...64ad72216b8 <unknown>\n#16 0x564ad7221847 <unknown>\n#17 0x564ad7231243 <unknown>\n#18 0x7f65ea440ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259228.3991416
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x564ad72384e3 <unknown>\n#1 0x564ad6f67c76 <unknown>\n#2 0x564ad6f9504a <unknown>\n#3 0x564ad6f904a1 <unknown>\n#4 0x564ad6f8d029 <unknown>\n#5 0x564ad6fcbccc <unknown>\n#6 0x564ad6fcb47f <unknown>\n#7 0x564ad6fc2de3 <unknown>\n#8 0x564ad6f982dd <unknown>\n#9 0x564ad6f9934e <unknown>\n#10 0x564ad71f83e4 <unknown>\n#11 0x564ad71fc3d7 <unknown>\n#12 0x564ad7206b20 <unknown>\n#13 0x564ad71fd023 <unknown>\n#14 0x564ad71cb1aa <unknown>\n#15 0x564ad72216b8 <unknown>\n#16 0x564ad7221847 <unknown>\n#17 0x564ad7231243 <unknown>\n#18 0x7f65ea440ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:29, 1692259229123, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55ce57a5c6b8 <unknown>\n#16 0x55ce57a5c847 <unknown>\n#17 0x55ce57a6c243 <unknown>\n#18 0x7f84373f9ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206137', 'issue_key': 'AAFAIA-629', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259229.1095376
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5ce57a5c6b8 <unknown>\n#16 0x55ce57a5c847 <unknown>\n#17 0x55ce57a6c243 <unknown>\n#18 0x7f84373f9ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259229.1097357
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55ce57a734e3 <unknown>\n#1 0x55ce577a2c76 <unknown>\n#2 0x55ce577d004a <unknown>\n#3 0x55ce577cb4a1 <unknown>\n#4 0x55ce577c8029 <unknown>\n#5 0x55ce57806ccc <unknown>\n#6 0x55ce5780647f <unknown>\n#7 0x55ce577fdde3 <unknown>\n#8 0x55ce577d32dd <unknown>\n#9 0x55ce577d434e <unknown>\n#10 0x55ce57a333e4 <unknown>\n#11 0x55ce57a373d7 <unknown>\n#12 0x55ce57a41b20 <unknown>\n#13 0x55ce57a38023 <unknown>\n#14 0x55ce57a061aa <unknown>\n#15 0x55ce57a5c6b8 <unknown>\n#16 0x55ce57a5c847 <unknown>\n#17 0x55ce57a6c243 <unknown>\n#18 0x7f84373f9ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:29, 1692259229849, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55b2c4f9d6b8 <unknown>\n#16 0x55b2c4f9d847 <unknown>\n#17 0x55b2c4fad243 <unknown>\n#18 0x7f5a43d84ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211542', 'issue_key': 'AAFAIA-6034', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259229.8152142
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5b2c4f9d6b8 <unknown>\n#16 0x55b2c4f9d847 <unknown>\n#17 0x55b2c4fad243 <unknown>\n#18 0x7f5a43d84ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259229.8154101
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55b2c4fb44e3 <unknown>\n#1 0x55b2c4ce3c76 <unknown>\n#2 0x55b2c4d1104a <unknown>\n#3 0x55b2c4d0c4a1 <unknown>\n#4 0x55b2c4d09029 <unknown>\n#5 0x55b2c4d47ccc <unknown>\n#6 0x55b2c4d4747f <unknown>\n#7 0x55b2c4d3ede3 <unknown>\n#8 0x55b2c4d142dd <unknown>\n#9 0x55b2c4d1534e <unknown>\n#10 0x55b2c4f743e4 <unknown>\n#11 0x55b2c4f783d7 <unknown>\n#12 0x55b2c4f82b20 <unknown>\n#13 0x55b2c4f79023 <unknown>\n#14 0x55b2c4f471aa <unknown>\n#15 0x55b2c4f9d6b8 <unknown>\n#16 0x55b2c4f9d847 <unknown>\n#17 0x55b2c4fad243 <unknown>\n#18 0x7f5a43d84ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:30, 1692259230565, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55a7f6cd36b8 <unknown>\n#16 0x55a7f6cd3847 <unknown>\n#17 0x55a7f6ce3243 <unknown>\n#18 0x7f3be78beea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211206', 'issue_key': 'AAFAIA-5698', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259230.5503457
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5a7f6cd36b8 <unknown>\n#16 0x55a7f6cd3847 <unknown>\n#17 0x55a7f6ce3243 <unknown>\n#18 0x7f3be78beea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259230.5505385
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55a7f6cea4e3 <unknown>\n#1 0x55a7f6a19c76 <unknown>\n#2 0x55a7f6a4704a <unknown>\n#3 0x55a7f6a424a1 <unknown>\n#4 0x55a7f6a3f029 <unknown>\n#5 0x55a7f6a7dccc <unknown>\n#6 0x55a7f6a7d47f <unknown>\n#7 0x55a7f6a74de3 <unknown>\n#8 0x55a7f6a4a2dd <unknown>\n#9 0x55a7f6a4b34e <unknown>\n#10 0x55a7f6caa3e4 <unknown>\n#11 0x55a7f6cae3d7 <unknown>\n#12 0x55a7f6cb8b20 <unknown>\n#13 0x55a7f6caf023 <unknown>\n#14 0x55a7f6c7d1aa <unknown>\n#15 0x55a7f6cd36b8 <unknown>\n#16 0x55a7f6cd3847 <unknown>\n#17 0x55a7f6ce3243 <unknown>\n#18 0x7f3be78beea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:31, 1692259231278, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55e69a5786b8 <unknown>\n#16 0x55e69a578847 <unknown>\n#17 0x55e69a588243 <unknown>\n#18 0x7fcc3c31eea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '915003', 'issue_key': 'AABIS-439', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259231.265315
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5e69a5786b8 <unknown>\n#16 0x55e69a578847 <unknown>\n#17 0x55e69a588243 <unknown>\n#18 0x7fcc3c31eea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259231.265514
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55e69a58f4e3 <unknown>\n#1 0x55e69a2bec76 <unknown>\n#2 0x55e69a2ec04a <unknown>\n#3 0x55e69a2e74a1 <unknown>\n#4 0x55e69a2e4029 <unknown>\n#5 0x55e69a322ccc <unknown>\n#6 0x55e69a32247f <unknown>\n#7 0x55e69a319de3 <unknown>\n#8 0x55e69a2ef2dd <unknown>\n#9 0x55e69a2f034e <unknown>\n#10 0x55e69a54f3e4 <unknown>\n#11 0x55e69a5533d7 <unknown>\n#12 0x55e69a55db20 <unknown>\n#13 0x55e69a554023 <unknown>\n#14 0x55e69a5221aa <unknown>\n#15 0x55e69a5786b8 <unknown>\n#16 0x55e69a578847 <unknown>\n#17 0x55e69a588243 <unknown>\n#18 0x7fcc3c31eea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:31, 1692259231992, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55ddccca66b8 <unknown>\n#16 0x55ddccca6847 <unknown>\n#17 0x55ddcccb6243 <unknown>\n#18 0x7ff6916faea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211802', 'issue_key': 'AAFAIA-6294', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259231.9791555
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5ddccca66b8 <unknown>\n#16 0x55ddccca6847 <unknown>\n#17 0x55ddcccb6243 <unknown>\n#18 0x7ff6916faea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259231.9793503
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55ddcccbd4e3 <unknown>\n#1 0x55ddcc9ecc76 <unknown>\n#2 0x55ddcca1a04a <unknown>\n#3 0x55ddcca154a1 <unknown>\n#4 0x55ddcca12029 <unknown>\n#5 0x55ddcca50ccc <unknown>\n#6 0x55ddcca5047f <unknown>\n#7 0x55ddcca47de3 <unknown>\n#8 0x55ddcca1d2dd <unknown>\n#9 0x55ddcca1e34e <unknown>\n#10 0x55ddccc7d3e4 <unknown>\n#11 0x55ddccc813d7 <unknown>\n#12 0x55ddccc8bb20 <unknown>\n#13 0x55ddccc82023 <unknown>\n#14 0x55ddccc501aa <unknown>\n#15 0x55ddccca66b8 <unknown>\n#16 0x55ddccca6847 <unknown>\n#17 0x55ddcccb6243 <unknown>\n#18 0x7ff6916faea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:32, 1692259232706, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...560596a9c6b8 <unknown>\n#16 0x560596a9c847 <unknown>\n#17 0x560596aac243 <unknown>\n#18 0x7f0b83f49ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211829', 'issue_key': 'AAFAIA-6321', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259232.6930583
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...60596a9c6b8 <unknown>\n#16 0x560596a9c847 <unknown>\n#17 0x560596aac243 <unknown>\n#18 0x7f0b83f49ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259232.69325
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x560596ab34e3 <unknown>\n#1 0x5605967e2c76 <unknown>\n#2 0x56059681004a <unknown>\n#3 0x56059680b4a1 <unknown>\n#4 0x560596808029 <unknown>\n#5 0x560596846ccc <unknown>\n#6 0x56059684647f <unknown>\n#7 0x56059683dde3 <unknown>\n#8 0x5605968132dd <unknown>\n#9 0x56059681434e <unknown>\n#10 0x560596a733e4 <unknown>\n#11 0x560596a773d7 <unknown>\n#12 0x560596a81b20 <unknown>\n#13 0x560596a78023 <unknown>\n#14 0x560596a461aa <unknown>\n#15 0x560596a9c6b8 <unknown>\n#16 0x560596a9c847 <unknown>\n#17 0x560596aac243 <unknown>\n#18 0x7f0b83f49ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:33, 1692259233432, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...560f7f1e26b8 <unknown>\n#16 0x560f7f1e2847 <unknown>\n#17 0x560f7f1f2243 <unknown>\n#18 0x7fd6eb40fea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210897', 'issue_key': 'AAFAIA-5389', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259233.3975532
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...60f7f1e26b8 <unknown>\n#16 0x560f7f1e2847 <unknown>\n#17 0x560f7f1f2243 <unknown>\n#18 0x7fd6eb40fea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259233.3977442
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x560f7f1f94e3 <unknown>\n#1 0x560f7ef28c76 <unknown>\n#2 0x560f7ef5604a <unknown>\n#3 0x560f7ef514a1 <unknown>\n#4 0x560f7ef4e029 <unknown>\n#5 0x560f7ef8cccc <unknown>\n#6 0x560f7ef8c47f <unknown>\n#7 0x560f7ef83de3 <unknown>\n#8 0x560f7ef592dd <unknown>\n#9 0x560f7ef5a34e <unknown>\n#10 0x560f7f1b93e4 <unknown>\n#11 0x560f7f1bd3d7 <unknown>\n#12 0x560f7f1c7b20 <unknown>\n#13 0x560f7f1be023 <unknown>\n#14 0x560f7f18c1aa <unknown>\n#15 0x560f7f1e26b8 <unknown>\n#16 0x560f7f1e2847 <unknown>\n#17 0x560f7f1f2243 <unknown>\n#18 0x7fd6eb40fea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:34, 1692259234141, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55b812d9d6b8 <unknown>\n#16 0x55b812d9d847 <unknown>\n#17 0x55b812dad243 <unknown>\n#18 0x7f3e0abeaea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '209994', 'issue_key': 'AAFAIA-4486', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259234.1274958
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5b812d9d6b8 <unknown>\n#16 0x55b812d9d847 <unknown>\n#17 0x55b812dad243 <unknown>\n#18 0x7f3e0abeaea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259234.1276953
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55b812db44e3 <unknown>\n#1 0x55b812ae3c76 <unknown>\n#2 0x55b812b1104a <unknown>\n#3 0x55b812b0c4a1 <unknown>\n#4 0x55b812b09029 <unknown>\n#5 0x55b812b47ccc <unknown>\n#6 0x55b812b4747f <unknown>\n#7 0x55b812b3ede3 <unknown>\n#8 0x55b812b142dd <unknown>\n#9 0x55b812b1534e <unknown>\n#10 0x55b812d743e4 <unknown>\n#11 0x55b812d783d7 <unknown>\n#12 0x55b812d82b20 <unknown>\n#13 0x55b812d79023 <unknown>\n#14 0x55b812d471aa <unknown>\n#15 0x55b812d9d6b8 <unknown>\n#16 0x55b812d9d847 <unknown>\n#17 0x55b812dad243 <unknown>\n#18 0x7f3e0abeaea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:34, 1692259234838, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...562b2562e6b8 <unknown>\n#16 0x562b2562e847 <unknown>\n#17 0x562b2563e243 <unknown>\n#18 0x7f24bfc68ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '209315', 'issue_key': 'AAFAIA-3807', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259234.8254273
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...62b2562e6b8 <unknown>\n#16 0x562b2562e847 <unknown>\n#17 0x562b2563e243 <unknown>\n#18 0x7f24bfc68ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259234.8256145
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x562b256454e3 <unknown>\n#1 0x562b25374c76 <unknown>\n#2 0x562b253a204a <unknown>\n#3 0x562b2539d4a1 <unknown>\n#4 0x562b2539a029 <unknown>\n#5 0x562b253d8ccc <unknown>\n#6 0x562b253d847f <unknown>\n#7 0x562b253cfde3 <unknown>\n#8 0x562b253a52dd <unknown>\n#9 0x562b253a634e <unknown>\n#10 0x562b256053e4 <unknown>\n#11 0x562b256093d7 <unknown>\n#12 0x562b25613b20 <unknown>\n#13 0x562b2560a023 <unknown>\n#14 0x562b255d81aa <unknown>\n#15 0x562b2562e6b8 <unknown>\n#16 0x562b2562e847 <unknown>\n#17 0x562b2563e243 <unknown>\n#18 0x7f24bfc68ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:35, 1692259235535, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5611518e16b8 <unknown>\n#16 0x5611518e1847 <unknown>\n#17 0x5611518f1243 <unknown>\n#18 0x7ff0cc570ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '915208', 'issue_key': 'AABIS-644', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259235.522526
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...611518e16b8 <unknown>\n#16 0x5611518e1847 <unknown>\n#17 0x5611518f1243 <unknown>\n#18 0x7ff0cc570ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259235.5227203
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5611518f84e3 <unknown>\n#1 0x561151627c76 <unknown>\n#2 0x56115165504a <unknown>\n#3 0x5611516504a1 <unknown>\n#4 0x56115164d029 <unknown>\n#5 0x56115168bccc <unknown>\n#6 0x56115168b47f <unknown>\n#7 0x561151682de3 <unknown>\n#8 0x5611516582dd <unknown>\n#9 0x56115165934e <unknown>\n#10 0x5611518b83e4 <unknown>\n#11 0x5611518bc3d7 <unknown>\n#12 0x5611518c6b20 <unknown>\n#13 0x5611518bd023 <unknown>\n#14 0x56115188b1aa <unknown>\n#15 0x5611518e16b8 <unknown>\n#16 0x5611518e1847 <unknown>\n#17 0x5611518f1243 <unknown>\n#18 0x7ff0cc570ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:36, 1692259236249, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55bc263ec6b8 <unknown>\n#16 0x55bc263ec847 <unknown>\n#17 0x55bc263fc243 <unknown>\n#18 0x7f65e94caea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '208804', 'issue_key': 'AAFAIA-3296', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259236.2363129
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5bc263ec6b8 <unknown>\n#16 0x55bc263ec847 <unknown>\n#17 0x55bc263fc243 <unknown>\n#18 0x7f65e94caea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259236.2365208
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55bc264034e3 <unknown>\n#1 0x55bc26132c76 <unknown>\n#2 0x55bc2616004a <unknown>\n#3 0x55bc2615b4a1 <unknown>\n#4 0x55bc26158029 <unknown>\n#5 0x55bc26196ccc <unknown>\n#6 0x55bc2619647f <unknown>\n#7 0x55bc2618dde3 <unknown>\n#8 0x55bc261632dd <unknown>\n#9 0x55bc2616434e <unknown>\n#10 0x55bc263c33e4 <unknown>\n#11 0x55bc263c73d7 <unknown>\n#12 0x55bc263d1b20 <unknown>\n#13 0x55bc263c8023 <unknown>\n#14 0x55bc263961aa <unknown>\n#15 0x55bc263ec6b8 <unknown>\n#16 0x55bc263ec847 <unknown>\n#17 0x55bc263fc243 <unknown>\n#18 0x7f65e94caea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:36, 1692259236986, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55729a5636b8 <unknown>\n#16 0x55729a563847 <unknown>\n#17 0x55729a573243 <unknown>\n#18 0x7f41b288bea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210629', 'issue_key': 'AAFAIA-5121', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259236.9507103
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5729a5636b8 <unknown>\n#16 0x55729a563847 <unknown>\n#17 0x55729a573243 <unknown>\n#18 0x7f41b288bea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259236.9509058
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55729a57a4e3 <unknown>\n#1 0x55729a2a9c76 <unknown>\n#2 0x55729a2d704a <unknown>\n#3 0x55729a2d24a1 <unknown>\n#4 0x55729a2cf029 <unknown>\n#5 0x55729a30dccc <unknown>\n#6 0x55729a30d47f <unknown>\n#7 0x55729a304de3 <unknown>\n#8 0x55729a2da2dd <unknown>\n#9 0x55729a2db34e <unknown>\n#10 0x55729a53a3e4 <unknown>\n#11 0x55729a53e3d7 <unknown>\n#12 0x55729a548b20 <unknown>\n#13 0x55729a53f023 <unknown>\n#14 0x55729a50d1aa <unknown>\n#15 0x55729a5636b8 <unknown>\n#16 0x55729a563847 <unknown>\n#17 0x55729a573243 <unknown>\n#18 0x7f41b288bea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:37, 1692259237699, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5575c60066b8 <unknown>\n#16 0x5575c6006847 <unknown>\n#17 0x5575c6016243 <unknown>\n#18 0x7febc88f2ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '914939', 'issue_key': 'AABIS-375', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259237.6862166
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...575c60066b8 <unknown>\n#16 0x5575c6006847 <unknown>\n#17 0x5575c6016243 <unknown>\n#18 0x7febc88f2ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259237.6864154
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5575c601d4e3 <unknown>\n#1 0x5575c5d4cc76 <unknown>\n#2 0x5575c5d7a04a <unknown>\n#3 0x5575c5d754a1 <unknown>\n#4 0x5575c5d72029 <unknown>\n#5 0x5575c5db0ccc <unknown>\n#6 0x5575c5db047f <unknown>\n#7 0x5575c5da7de3 <unknown>\n#8 0x5575c5d7d2dd <unknown>\n#9 0x5575c5d7e34e <unknown>\n#10 0x5575c5fdd3e4 <unknown>\n#11 0x5575c5fe13d7 <unknown>\n#12 0x5575c5febb20 <unknown>\n#13 0x5575c5fe2023 <unknown>\n#14 0x5575c5fb01aa <unknown>\n#15 0x5575c60066b8 <unknown>\n#16 0x5575c6006847 <unknown>\n#17 0x5575c6016243 <unknown>\n#18 0x7febc88f2ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:38, 1692259238416, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...562ec7dcf6b8 <unknown>\n#16 0x562ec7dcf847 <unknown>\n#17 0x562ec7ddf243 <unknown>\n#18 0x7f5daa90bea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210960', 'issue_key': 'AAFAIA-5452', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259238.393524
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...62ec7dcf6b8 <unknown>\n#16 0x562ec7dcf847 <unknown>\n#17 0x562ec7ddf243 <unknown>\n#18 0x7f5daa90bea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259238.3937929
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x562ec7de64e3 <unknown>\n#1 0x562ec7b15c76 <unknown>\n#2 0x562ec7b4304a <unknown>\n#3 0x562ec7b3e4a1 <unknown>\n#4 0x562ec7b3b029 <unknown>\n#5 0x562ec7b79ccc <unknown>\n#6 0x562ec7b7947f <unknown>\n#7 0x562ec7b70de3 <unknown>\n#8 0x562ec7b462dd <unknown>\n#9 0x562ec7b4734e <unknown>\n#10 0x562ec7da63e4 <unknown>\n#11 0x562ec7daa3d7 <unknown>\n#12 0x562ec7db4b20 <unknown>\n#13 0x562ec7dab023 <unknown>\n#14 0x562ec7d791aa <unknown>\n#15 0x562ec7dcf6b8 <unknown>\n#16 0x562ec7dcf847 <unknown>\n#17 0x562ec7ddf243 <unknown>\n#18 0x7f5daa90bea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:39, 1692259239125, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5621730e16b8 <unknown>\n#16 0x5621730e1847 <unknown>\n#17 0x5621730f1243 <unknown>\n#18 0x7f939c218ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '915503', 'issue_key': 'AABIS-939', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AAB...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259239.1123354
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...621730e16b8 <unknown>\n#16 0x5621730e1847 <unknown>\n#17 0x5621730f1243 <unknown>\n#18 0x7f939c218ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259239.1125314
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5621730f84e3 <unknown>\n#1 0x562172e27c76 <unknown>\n#2 0x562172e5504a <unknown>\n#3 0x562172e504a1 <unknown>\n#4 0x562172e4d029 <unknown>\n#5 0x562172e8bccc <unknown>\n#6 0x562172e8b47f <unknown>\n#7 0x562172e82de3 <unknown>\n#8 0x562172e582dd <unknown>\n#9 0x562172e5934e <unknown>\n#10 0x5621730b83e4 <unknown>\n#11 0x5621730bc3d7 <unknown>\n#12 0x5621730c6b20 <unknown>\n#13 0x5621730bd023 <unknown>\n#14 0x56217308b1aa <unknown>\n#15 0x5621730e16b8 <unknown>\n#16 0x5621730e1847 <unknown>\n#17 0x5621730f1243 <unknown>\n#18 0x7f939c218ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:39, 1692259239830, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f135aa86b8 <unknown>\n#16 0x55f135aa8847 <unknown>\n#17 0x55f135ab8243 <unknown>\n#18 0x7f3add76cea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210802', 'issue_key': 'AAFAIA-5294', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259239.817541
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f135aa86b8 <unknown>\n#16 0x55f135aa8847 <unknown>\n#17 0x55f135ab8243 <unknown>\n#18 0x7f3add76cea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259239.8177302
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f135abf4e3 <unknown>\n#1 0x55f1357eec76 <unknown>\n#2 0x55f13581c04a <unknown>\n#3 0x55f1358174a1 <unknown>\n#4 0x55f135814029 <unknown>\n#5 0x55f135852ccc <unknown>\n#6 0x55f13585247f <unknown>\n#7 0x55f135849de3 <unknown>\n#8 0x55f13581f2dd <unknown>\n#9 0x55f13582034e <unknown>\n#10 0x55f135a7f3e4 <unknown>\n#11 0x55f135a833d7 <unknown>\n#12 0x55f135a8db20 <unknown>\n#13 0x55f135a84023 <unknown>\n#14 0x55f135a521aa <unknown>\n#15 0x55f135aa86b8 <unknown>\n#16 0x55f135aa8847 <unknown>\n#17 0x55f135ab8243 <unknown>\n#18 0x7f3add76cea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:40, 1692259240555, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55835701b6b8 <unknown>\n#16 0x55835701b847 <unknown>\n#17 0x55835702b243 <unknown>\n#18 0x7f6427875ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '208758', 'issue_key': 'AAFAIA-3250', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259240.539562
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5835701b6b8 <unknown>\n#16 0x55835701b847 <unknown>\n#17 0x55835702b243 <unknown>\n#18 0x7f6427875ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259240.5397527
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5583570324e3 <unknown>\n#1 0x558356d61c76 <unknown>\n#2 0x558356d8f04a <unknown>\n#3 0x558356d8a4a1 <unknown>\n#4 0x558356d87029 <unknown>\n#5 0x558356dc5ccc <unknown>\n#6 0x558356dc547f <unknown>\n#7 0x558356dbcde3 <unknown>\n#8 0x558356d922dd <unknown>\n#9 0x558356d9334e <unknown>\n#10 0x558356ff23e4 <unknown>\n#11 0x558356ff63d7 <unknown>\n#12 0x558357000b20 <unknown>\n#13 0x558356ff7023 <unknown>\n#14 0x558356fc51aa <unknown>\n#15 0x55835701b6b8 <unknown>\n#16 0x55835701b847 <unknown>\n#17 0x55835702b243 <unknown>\n#18 0x7f6427875ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:41, 1692259241273, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5643b88776b8 <unknown>\n#16 0x5643b8877847 <unknown>\n#17 0x5643b8887243 <unknown>\n#18 0x7fb94daa0ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '210420', 'issue_key': 'AAFAIA-4912', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259241.260659
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...643b88776b8 <unknown>\n#16 0x5643b8877847 <unknown>\n#17 0x5643b8887243 <unknown>\n#18 0x7fb94daa0ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259241.2608514
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5643b888e4e3 <unknown>\n#1 0x5643b85bdc76 <unknown>\n#2 0x5643b85eb04a <unknown>\n#3 0x5643b85e64a1 <unknown>\n#4 0x5643b85e3029 <unknown>\n#5 0x5643b8621ccc <unknown>\n#6 0x5643b862147f <unknown>\n#7 0x5643b8618de3 <unknown>\n#8 0x5643b85ee2dd <unknown>\n#9 0x5643b85ef34e <unknown>\n#10 0x5643b884e3e4 <unknown>\n#11 0x5643b88523d7 <unknown>\n#12 0x5643b885cb20 <unknown>\n#13 0x5643b8853023 <unknown>\n#14 0x5643b88211aa <unknown>\n#15 0x5643b88776b8 <unknown>\n#16 0x5643b8877847 <unknown>\n#17 0x5643b8887243 <unknown>\n#18 0x7fb94daa0ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:41, 1692259241979, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55fc3ef906b8 <unknown>\n#16 0x55fc3ef90847 <unknown>\n#17 0x55fc3efa0243 <unknown>\n#18 0x7f6d60d40ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211375', 'issue_key': 'AAFAIA-5867', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259241.9657757
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5fc3ef906b8 <unknown>\n#16 0x55fc3ef90847 <unknown>\n#17 0x55fc3efa0243 <unknown>\n#18 0x7f6d60d40ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259241.9659722
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55fc3efa74e3 <unknown>\n#1 0x55fc3ecd6c76 <unknown>\n#2 0x55fc3ed0404a <unknown>\n#3 0x55fc3ecff4a1 <unknown>\n#4 0x55fc3ecfc029 <unknown>\n#5 0x55fc3ed3accc <unknown>\n#6 0x55fc3ed3a47f <unknown>\n#7 0x55fc3ed31de3 <unknown>\n#8 0x55fc3ed072dd <unknown>\n#9 0x55fc3ed0834e <unknown>\n#10 0x55fc3ef673e4 <unknown>\n#11 0x55fc3ef6b3d7 <unknown>\n#12 0x55fc3ef75b20 <unknown>\n#13 0x55fc3ef6c023 <unknown>\n#14 0x55fc3ef3a1aa <unknown>\n#15 0x55fc3ef906b8 <unknown>\n#16 0x55fc3ef90847 <unknown>\n#17 0x55fc3efa0243 <unknown>\n#18 0x7f6d60d40ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:42, 1692259242711, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...5612d31386b8 <unknown>\n#16 0x5612d3138847 <unknown>\n#17 0x5612d3148243 <unknown>\n#18 0x7f02870cdea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '209313', 'issue_key': 'AAFAIA-3805', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259242.698333
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...612d31386b8 <unknown>\n#16 0x5612d3138847 <unknown>\n#17 0x5612d3148243 <unknown>\n#18 0x7f02870cdea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259242.698537
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x5612d314f4e3 <unknown>\n#1 0x5612d2e7ec76 <unknown>\n#2 0x5612d2eac04a <unknown>\n#3 0x5612d2ea74a1 <unknown>\n#4 0x5612d2ea4029 <unknown>\n#5 0x5612d2ee2ccc <unknown>\n#6 0x5612d2ee247f <unknown>\n#7 0x5612d2ed9de3 <unknown>\n#8 0x5612d2eaf2dd <unknown>\n#9 0x5612d2eb034e <unknown>\n#10 0x5612d310f3e4 <unknown>\n#11 0x5612d31133d7 <unknown>\n#12 0x5612d311db20 <unknown>\n#13 0x5612d3114023 <unknown>\n#14 0x5612d30e21aa <unknown>\n#15 0x5612d31386b8 <unknown>\n#16 0x5612d3138847 <unknown>\n#17 0x5612d3148243 <unknown>\n#18 0x7f02870cdea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:43, 1692259243430, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55f5156be6b8 <unknown>\n#16 0x55f5156be847 <unknown>\n#17 0x55f5156ce243 <unknown>\n#18 0x7f2b2b5f9ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '206949', 'issue_key': 'AAFAIA-1441', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259243.4129899
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5f5156be6b8 <unknown>\n#16 0x55f5156be847 <unknown>\n#17 0x55f5156ce243 <unknown>\n#18 0x7f2b2b5f9ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259243.4132314
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55f5156d54e3 <unknown>\n#1 0x55f515404c76 <unknown>\n#2 0x55f51543204a <unknown>\n#3 0x55f51542d4a1 <unknown>\n#4 0x55f51542a029 <unknown>\n#5 0x55f515468ccc <unknown>\n#6 0x55f51546847f <unknown>\n#7 0x55f51545fde3 <unknown>\n#8 0x55f5154352dd <unknown>\n#9 0x55f51543634e <unknown>\n#10 0x55f5156953e4 <unknown>\n#11 0x55f5156993d7 <unknown>\n#12 0x55f5156a3b20 <unknown>\n#13 0x55f51569a023 <unknown>\n#14 0x55f5156681aa <unknown>\n#15 0x55f5156be6b8 <unknown>\n#16 0x55f5156be847 <unknown>\n#17 0x55f5156ce243 <unknown>\n#18 0x7f2b2b5f9ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:44, 1692259244143, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55c8382f66b8 <unknown>\n#16 0x55c8382f6847 <unknown>\n#17 0x55c838306243 <unknown>\n#18 0x7fbd6a603ea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '207125', 'issue_key': 'AAFAIA-1617', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259244.1302114
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5c8382f66b8 <unknown>\n#16 0x55c8382f6847 <unknown>\n#17 0x55c838306243 <unknown>\n#18 0x7fbd6a603ea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259244.1304064
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55c83830d4e3 <unknown>\n#1 0x55c83803cc76 <unknown>\n#2 0x55c83806a04a <unknown>\n#3 0x55c8380654a1 <unknown>\n#4 0x55c838062029 <unknown>\n#5 0x55c8380a0ccc <unknown>\n#6 0x55c8380a047f <unknown>\n#7 0x55c838097de3 <unknown>\n#8 0x55c83806d2dd <unknown>\n#9 0x55c83806e34e <unknown>\n#10 0x55c8382cd3e4 <unknown>\n#11 0x55c8382d13d7 <unknown>\n#12 0x55c8382dbb20 <unknown>\n#13 0x55c8382d2023 <unknown>\n#14 0x55c8382a01aa <unknown>\n#15 0x55c8382f66b8 <unknown>\n#16 0x55c8382f6847 <unknown>\n#17 0x55c838306243 <unknown>\n#18 0x7fbd6a603ea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception
+08-17-2023, 08:00:44, 1692259244877, Action: test_0_selenium_a_login, Error: jira_webdriver = WebDriverExceptionPostpone('Message: session not created: This version of ChromeDriver only supports Chrome version 11...55bb8aac36b8 <unknown>\n#16 0x55bb8aac3847 <unknown>\n#17 0x55bb8aad3243 <unknown>\n#18 0x7f8e93f9dea7 start_thread\n')
+jira_datasets = {'custom_issues': [], 'issue_id': '211271', 'issue_key': 'AAFAIA-5763', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692259244.8646877
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This ...5bb8aac36b8 <unknown>\n#16 0x55bb8aac3847 <unknown>\n#17 0x55bb8aad3243 <unknown>\n#18 0x7f8e93f9dea7 start_thread\n'))
+success = False, exc_type = <class 'Exception'>, end = 1692259244.8648841
+timing = '0'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_07-59-43/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:open_login_page - Exception', Exception('Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 116.0.5845.96 with binary path /usr/bin/google-chrome\nStacktrace:\n#0 0x55bb8aada4e3 <unknown>\n#1 0x55bb8a809c76 <unknown>\n#2 0x55bb8a83704a <unknown>\n#3 0x55bb8a8324a1 <unknown>\n#4 0x55bb8a82f029 <unknown>\n#5 0x55bb8a86dccc <unknown>\n#6 0x55bb8a86d47f <unknown>\n#7 0x55bb8a864de3 <unknown>\n#8 0x55bb8a83a2dd <unknown>\n#9 0x55bb8a83b34e <unknown>\n#10 0x55bb8aa9a3e4 <unknown>\n#11 0x55bb8aa9e3d7 <unknown>\n#12 0x55bb8aaa8b20 <unknown>\n#13 0x55bb8aa9f023 <unknown>\n#14 0x55bb8aa6d1aa <unknown>\n#15 0x55bb8aac36b8 <unknown>\n#16 0x55bb8aac3847 <unknown>\n#17 0x55bb8aad3243 <unknown>\n#18 0x7f8e93f9dea7 start_thread\n')))
+
+selenium_ui/conftest.py:169: Exception

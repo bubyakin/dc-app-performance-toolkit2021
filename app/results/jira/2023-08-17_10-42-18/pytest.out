@@ -1,0 +1,1237 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py first driver inits
+1692268972986,786,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269002182,29196,selenium_login:login_and_view_dashboard,Success,True,
+1692269002182,29983,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:1 Passed:1 Failed:0
+1692269003477,1264,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:2 Passed:2 Failed:0
+1692269003848,369,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:3 Passed:3 Failed:0
+1692269004905,1055,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:4 Passed:4 Failed:0
+1692269005608,656,selenium_create_issue:open_quick_create,Success,True,
+1692269006856,588,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269006856,1247,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269006856,1904,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:5 Passed:5 Failed:0
+1692269007568,691,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269008775,457,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269008775,1898,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:6 Passed:6 Failed:0
+1692269009093,316,selenium_save_comment:open_comment_form,Success,True,
+1692269010522,835,selenium_save_comment:submit_form,Success,True,
+1692269010522,1745,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:7 Passed:7 Failed:0
+1692269013240,2716,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:8 Passed:8 Failed:0
+1692269014165,924,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:9 Passed:9 Failed:0
+1692269015078,911,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:10 Passed:10 Failed:0
+1692269016815,1735,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:11 Passed:11 Failed:0
+1692269017141,325,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:12 Passed:12 Failed:0
+1692269017639,496,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:13 Passed:13 Failed:0
+1692269018022,381,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:14 Passed:14 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 14 passed, 1 warning in 46.63s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269018258,189,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269020020,1761,selenium_login:login_and_view_dashboard,Success,True,
+1692269020020,1951,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:15 Passed:15 Failed:0
+1692269020585,432,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:16 Passed:16 Failed:0
+1692269020907,321,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:17 Passed:17 Failed:0
+1692269021709,801,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:18 Passed:18 Failed:0
+1692269022465,693,selenium_create_issue:open_quick_create,Success,True,
+1692269023690,597,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269023690,1225,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269023690,1919,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:19 Passed:19 Failed:0
+1692269024292,572,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269025626,474,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269025626,1907,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:20 Passed:20 Failed:0
+1692269025849,221,selenium_save_comment:open_comment_form,Success,True,
+1692269027115,664,selenium_save_comment:submit_form,Success,True,
+1692269027115,1488,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:21 Passed:21 Failed:0
+1692269028493,1376,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:22 Passed:22 Failed:0
+1692269029458,963,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:23 Passed:23 Failed:0
+1692269030245,786,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:24 Passed:24 Failed:0
+1692269031410,1163,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:25 Passed:25 Failed:0
+1692269031643,231,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:26 Passed:26 Failed:0
+1692269032167,523,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:27 Passed:27 Failed:0
+1692269032545,376,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:28 Passed:28 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 14 passed, 1 warning in 14.49s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269032788,197,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269033413,625,selenium_login:login_and_view_dashboard,Success,True,
+1692269033413,822,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:29 Passed:29 Failed:0
+1692269033886,416,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:30 Passed:30 Failed:0
+1692269034172,285,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:31 Passed:31 Failed:0
+1692269034887,713,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:32 Passed:32 Failed:0
+1692269035626,694,selenium_create_issue:open_quick_create,Success,True,
+1692269036814,602,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269036814,1187,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269036814,1883,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:33 Passed:33 Failed:0
+1692269037264,405,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269038596,571,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269038596,1736,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:34 Passed:34 Failed:0
+1692269038817,219,selenium_save_comment:open_comment_form,Success,True,
+1692269040086,664,selenium_save_comment:submit_form,Success,True,
+1692269040086,1488,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:35 Passed:35 Failed:0
+1692269041352,1264,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:36 Passed:36 Failed:0
+1692269042420,1067,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:37 Passed:37 Failed:0
+1692269043633,1211,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:38 Passed:38 Failed:0
+1692269044385,751,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:39 Passed:39 Failed:0
+1692269044626,239,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:40 Passed:40 Failed:0
+1692269045073,446,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:41 Passed:41 Failed:0
+1692269045411,336,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:42 Passed:42 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 14 passed, 1 warning in 12.84s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269045642,188,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269047557,1914,selenium_login:login_and_view_dashboard,Success,True,
+1692269047557,2103,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:43 Passed:43 Failed:0
+1692269048161,463,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:44 Passed:44 Failed:0
+1692269048510,347,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:45 Passed:45 Failed:0
+1692269049238,726,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:46 Passed:46 Failed:0
+1692269050155,844,selenium_create_issue:open_quick_create,Success,True,
+1692269054947,4185,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269054947,4792,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269054947,5637,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:47 Passed:47 Failed:0
+1692269060690,5696,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269063378,1903,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269063378,8384,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:48 Passed:48 Failed:0
+1692269066664,3284,selenium_save_comment:open_comment_form,Success,True,
+1692269071643,4368,selenium_save_comment:submit_form,Success,True,
+1692269071643,8264,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:49 Passed:49 Failed:0
+1692269078217,6572,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:50 Passed:50 Failed:0
+1692269079013,795,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:51 Passed:51 Failed:0
+1692269079921,906,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:52 Passed:52 Failed:0
+1692269080698,775,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:53 Passed:53 Failed:0
+1692269080976,276,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:54 Passed:54 Failed:0
+1692269081730,753,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:55 Passed:55 Failed:0
+1692269082202,470,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:56 Passed:56 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 14 passed, 1 warning in 36.76s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269085782,3535,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269128846,43064,selenium_login:login_and_view_dashboard,Success,True,
+1692269128846,46599,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:57 Passed:57 Failed:0
+1692269131684,2768,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:58 Passed:58 Failed:0
+1692269133109,1424,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:59 Passed:59 Failed:0
+1692269145447,12336,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:60 Passed:60 Failed:0
+1692269149777,4271,selenium_create_issue:open_quick_create,Success,True,
+1692269152627,2220,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269152627,2850,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269152627,7121,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:61 Passed:61 Failed:0
+1692269154606,1919,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269164289,8284,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269164289,11602,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:62 Passed:62 Failed:0
+1692269165538,1247,selenium_save_comment:open_comment_form,Success,True,
+1692269169689,2432,selenium_save_comment:submit_form,Success,True,
+1692269169690,5399,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:63 Passed:63 Failed:0
+1692269184853,15162,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:64 Passed:64 Failed:0
+1692269198477,13622,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:65 Passed:65 Failed:0
+1692269212281,13802,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:66 Passed:66 Failed:0
+1692269227281,14999,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:67 Passed:67 Failed:0
+1692269228499,1217,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:68 Passed:68 Failed:0
+1692269229978,1477,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:69 Passed:69 Failed:0
+1692269232046,2067,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:70 Passed:70 Failed:0
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 14 passed, 1 warning in 149.81s (0:02:29) ===================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269233080,989,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269257203,24122,selenium_login:login_and_view_dashboard,Success,True,
+1692269257203,25112,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:71 Passed:71 Failed:0
+1692269258986,1699,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:72 Passed:72 Failed:0
+1692269260138,1151,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:73 Passed:73 Failed:0
+1692269261691,1551,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:74 Passed:74 Failed:0
+1692269262962,1149,selenium_create_issue:open_quick_create,Success,True,
+1692269279059,15475,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269279059,16097,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269279059,17247,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:75 Passed:75 Failed:0
+1692269280278,1152,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269284363,2255,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269284363,5237,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:76 Passed:76 Failed:0
+1692269297570,13204,selenium_save_comment:open_comment_form,Success,True,
+1692269326852,15820,selenium_save_comment:submit_form,Success,True,
+1692269326852,42487,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:77 Passed:77 Failed:0
+1692269353387,26533,selenium_search_jql,Failed measure: selenium_search_jql - TimeoutException,False,
+FAction: test_1_selenium_search_jql, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209737', 'issue_key': 'AAFAIA-4229', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_search_jql(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.search_jql(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:139: in search_jql
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269326.8527503
+error_msg = 'Failed measure: selenium_search_jql - TimeoutException'
+full_exception = TimeoutException(), success = False
+exc_type = <class 'selenium.common.exceptions.TimeoutException'>
+end = 1692269353.3866324, timing = '26533'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_search_jql - TimeoutException', TimeoutException())
+
+selenium_ui/conftest.py:169: Exception
+
+test_1_selenium_search_jql,Total:78 Passed:77 Failed:1
+1692269372318,8777,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:79 Passed:78 Failed:1
+1692269384800,12480,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:80 Passed:79 Failed:1
+1692269389244,4443,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:81 Passed:80 Failed:1
+1692269392953,3707,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:82 Passed:81 Failed:1
+1692269397616,4661,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:83 Passed:82 Failed:1
+1692269399750,2133,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:84 Passed:83 Failed:1
+
+
+=================================== FAILURES ===================================
+__________________________ test_1_selenium_search_jql __________________________
+
+jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '209737', 'issue_key': 'AAFAIA-4229', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_search_jql(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.search_jql(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:139: in search_jql
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269326.8527503
+error_msg = 'Failed measure: selenium_search_jql - TimeoutException'
+full_exception = TimeoutException(), success = False
+exc_type = <class 'selenium.common.exceptions.TimeoutException'>
+end = 1692269353.3866324, timing = '26533'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_search_jql - TimeoutException', TimeoutException())
+
+selenium_ui/conftest.py:169: Exception
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED selenium_ui/jira_ui.py::test_1_selenium_search_jql - Exception: ('Fail...
+============= 1 failed, 13 passed, 1 warning in 167.68s (0:02:47) ==============
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269400699,903,selenium_login:open_login_page,Success,True,
+1692269482665,81965,selenium_login:login_and_view_dashboard,Failed measure: selenium_login:login_and_view_dashboard - TimeoutException,False,
+1692269482665,82869,selenium_login,Failed measure: selenium_login - Exception,False,
+FAction: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205997', 'issue_key': 'AAFAIA-489', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269399.7956886
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692269482.6653717
+timing = '82869'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+
+Etest_0_selenium_a_login,Total:85 Passed:83 Failed:2
+stest_1_selenium_view_project_summary,Total:86 Passed:83 Failed:2
+stest_1_selenium_browse_projects_list,Total:87 Passed:83 Failed:2
+stest_1_selenium_browse_boards_list,Total:88 Passed:83 Failed:2
+stest_1_selenium_create_issue,Total:89 Passed:83 Failed:2
+stest_1_selenium_edit_issue,Total:90 Passed:83 Failed:2
+stest_1_selenium_save_comment,Total:91 Passed:83 Failed:2
+stest_1_selenium_search_jql,Total:92 Passed:83 Failed:2
+stest_1_selenium_view_backlog_for_scrum_board,Total:93 Passed:83 Failed:2
+stest_1_selenium_view_scrum_board,Total:94 Passed:83 Failed:2
+stest_1_selenium_view_kanban_board,Total:95 Passed:83 Failed:2
+stest_1_selenium_view_dashboard,Total:96 Passed:83 Failed:2
+stest_1_selenium_view_issue,Total:97 Passed:83 Failed:2
+stest_2_selenium_z_log_out,Total:98 Passed:83 Failed:2
+
+
+==================================== ERRORS ====================================
+_________________ ERROR at teardown of test_0_selenium_a_login _________________
+
+request = <SubRequest 'jira_screen_shots' for <Function test_0_selenium_a_login>>
+jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+
+    @pytest.fixture
+    def jira_screen_shots(request, jira_webdriver):
+        yield
+>       get_screen_shots(request, jira_webdriver)
+
+selenium_ui/conftest.py:395: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/conftest.py:440: in get_screen_shots
+    webdriver.save_screenshot('{}.png'.format(error_artifact_name))
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:826: in save_screenshot
+    return self.get_screenshot_as_file(filename)
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:802: in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:836: in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:847: in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:346: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f03e7ffe410>
+response = {'status': 500, 'value': '{"value":{"error":"timeout","message":"timeout: Timed out receiving message from renderer: 1...wn>\\n#19 0x56300bebc847 \\u003Cunknown>\\n#20 0x56300becc243 \\u003Cunknown>\\n#21 0x7f8c6987bea7 start_thread\\n"}}'}
+
+    def check_response(self, response: Dict[str, Any]) -> None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                import json
+    
+                try:
+                    value = json.loads(value_json)
+                    if len(value) == 1:
+                        value = value["value"]
+                    status = value.get("error", None)
+                    if not status:
+                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                        message = value.get("value") or value.get("message")
+                        if not isinstance(message, str):
+                            value = message
+                            message = message.get("message")
+                    else:
+                        message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: Type[WebDriverException]
+        if status in ErrorCode.NO_SUCH_ELEMENT:
+            exception_class = NoSuchElementException
+        elif status in ErrorCode.NO_SUCH_FRAME:
+            exception_class = NoSuchFrameException
+        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:
+            exception_class = NoSuchShadowRootException
+        elif status in ErrorCode.NO_SUCH_WINDOW:
+            exception_class = NoSuchWindowException
+        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:
+            exception_class = StaleElementReferenceException
+        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:
+            exception_class = ElementNotVisibleException
+        elif status in ErrorCode.INVALID_ELEMENT_STATE:
+            exception_class = InvalidElementStateException
+        elif (
+            status in ErrorCode.INVALID_SELECTOR
+            or status in ErrorCode.INVALID_XPATH_SELECTOR
+            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER
+        ):
+            exception_class = InvalidSelectorException
+        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:
+            exception_class = ElementNotSelectableException
+        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:
+            exception_class = ElementNotInteractableException
+        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:
+            exception_class = InvalidCookieDomainException
+        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:
+            exception_class = UnableToSetCookieException
+        elif status in ErrorCode.TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.SCRIPT_TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.UNKNOWN_ERROR:
+            exception_class = WebDriverException
+        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:
+            exception_class = UnexpectedAlertPresentException
+        elif status in ErrorCode.NO_ALERT_OPEN:
+            exception_class = NoAlertPresentException
+        elif status in ErrorCode.IME_NOT_AVAILABLE:
+            exception_class = ImeNotAvailableException
+        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:
+            exception_class = ImeActivationFailedException
+        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:
+            exception_class = MoveTargetOutOfBoundsException
+        elif status in ErrorCode.JAVASCRIPT_ERROR:
+            exception_class = JavascriptException
+        elif status in ErrorCode.SESSION_NOT_CREATED:
+            exception_class = SessionNotCreatedException
+        elif status in ErrorCode.INVALID_ARGUMENT:
+            exception_class = InvalidArgumentException
+        elif status in ErrorCode.NO_SUCH_COOKIE:
+            exception_class = NoSuchCookieException
+        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:
+            exception_class = ScreenshotException
+        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:
+            exception_class = ElementClickInterceptedException
+        elif status in ErrorCode.INSECURE_CERTIFICATE:
+            exception_class = InsecureCertificateException
+        elif status in ErrorCode.INVALID_COORDINATES:
+            exception_class = InvalidCoordinatesException
+        elif status in ErrorCode.INVALID_SESSION_ID:
+            exception_class = InvalidSessionIdException
+        elif status in ErrorCode.UNKNOWN_METHOD:
+            exception_class = UnknownMethodException
+        else:
+            exception_class = WebDriverException
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 10.000
+E         (Session info: headless chrome=115.0.5790.170)
+E       Stacktrace:
+E       #0 0x56300bed34e3 <unknown>
+E       #1 0x56300bc02c76 <unknown>
+E       #2 0x56300bbec284 <unknown>
+E       #3 0x56300bbebfa0 <unknown>
+E       #4 0x56300bbea9bf <unknown>
+E       #5 0x56300bbeb162 <unknown>
+E       #6 0x56300bc0cf9c <unknown>
+E       #7 0x56300bc82bc2 <unknown>
+E       #8 0x56300bc5e012 <unknown>
+E       #9 0x56300bc7630e <unknown>
+E       #10 0x56300bc5dde3 <unknown>
+E       #11 0x56300bc332dd <unknown>
+E       #12 0x56300bc3434e <unknown>
+E       #13 0x56300be933e4 <unknown>
+E       #14 0x56300be973d7 <unknown>
+E       #15 0x56300bea1b20 <unknown>
+E       #16 0x56300be98023 <unknown>
+E       #17 0x56300be661aa <unknown>
+E       #18 0x56300bebc6b8 <unknown>
+E       #19 0x56300bebc847 <unknown>
+E       #20 0x56300becc243 <unknown>
+E       #21 0x7f8c6987bea7 start_thread
+
+/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:245: TimeoutException
+=================================== FAILURES ===================================
+___________________________ test_0_selenium_a_login ____________________________
+
+jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '205997', 'issue_key': 'AAFAIA-489', 'issues': [['AABIS-1', '914565', 'AABIS'], ['AA...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269399.7956886
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692269482.6653717
+timing = '82869'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED selenium_ui/jira_ui.py::test_0_selenium_a_login - Exception: ('Failed ...
+ERROR selenium_ui/jira_ui.py::test_0_selenium_a_login - selenium.common.excep...
+======== 1 failed, 13 skipped, 1 warning, 1 error in 143.13s (0:02:23) =========
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269548267,5310,selenium_login:open_login_page,Success,True,
+1692269625815,77547,selenium_login:login_and_view_dashboard,Failed measure: selenium_login:login_and_view_dashboard - TimeoutException,False,
+1692269625815,82858,selenium_login,Failed measure: selenium_login - Exception,False,
+FAction: test_0_selenium_a_login, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208298', 'issue_key': 'AAFAIA-2790', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269542.9565487
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692269625.8149438
+timing = '82858'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+
+test_0_selenium_a_login,Total:99 Passed:83 Failed:3
+stest_1_selenium_view_project_summary,Total:100 Passed:83 Failed:3
+stest_1_selenium_browse_projects_list,Total:101 Passed:83 Failed:3
+stest_1_selenium_browse_boards_list,Total:102 Passed:83 Failed:3
+stest_1_selenium_create_issue,Total:103 Passed:83 Failed:3
+stest_1_selenium_edit_issue,Total:104 Passed:83 Failed:3
+stest_1_selenium_save_comment,Total:105 Passed:83 Failed:3
+stest_1_selenium_search_jql,Total:106 Passed:83 Failed:3
+stest_1_selenium_view_backlog_for_scrum_board,Total:107 Passed:83 Failed:3
+stest_1_selenium_view_scrum_board,Total:108 Passed:83 Failed:3
+stest_1_selenium_view_kanban_board,Total:109 Passed:83 Failed:3
+stest_1_selenium_view_dashboard,Total:110 Passed:83 Failed:3
+stest_1_selenium_view_issue,Total:111 Passed:83 Failed:3
+stest_2_selenium_z_log_out,Total:112 Passed:83 Failed:3
+
+
+=================================== FAILURES ===================================
+___________________________ test_0_selenium_a_login ____________________________
+
+jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '208298', 'issue_key': 'AAFAIA-2790', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_0_selenium_a_login(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.login(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:74: in login
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269542.9565487
+error_msg = 'Failed measure: selenium_login - Exception'
+full_exception = Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException())
+success = False, exc_type = <class 'Exception'>, end = 1692269625.8149438
+timing = '82858'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_login - Exception', Exception('Failed measure: selenium_login:login_and_view_dashboard - TimeoutException', TimeoutException()))
+
+selenium_ui/conftest.py:169: Exception
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED selenium_ui/jira_ui.py::test_0_selenium_a_login - Exception: ('Failed ...
+============= 1 failed, 13 skipped, 1 warning in 153.83s (0:02:33) =============
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269697338,522,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269711200,13861,selenium_login:login_and_view_dashboard,Success,True,
+1692269711200,14384,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:113 Passed:84 Failed:3
+1692269712023,711,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:114 Passed:85 Failed:3
+1692269713078,1052,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:115 Passed:86 Failed:3
+1692269714389,1310,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:116 Passed:87 Failed:3
+1692269715643,1142,selenium_create_issue:open_quick_create,Success,True,
+1692269717856,1660,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269717856,2212,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269717856,3355,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:117 Passed:88 Failed:3
+1692269718560,616,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269720079,640,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269720079,2135,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:118 Passed:89 Failed:3
+1692269720340,260,selenium_save_comment:open_comment_form,Success,True,
+1692269722162,1203,selenium_save_comment:submit_form,Success,True,
+1692269722162,2082,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:119 Passed:90 Failed:3
+1692269726547,4383,selenium_search_jql,Success,True,
+.test_1_selenium_search_jql,Total:120 Passed:91 Failed:3
+1692269727700,1151,selenium_view_scrum_board_backlog,Success,True,
+.test_1_selenium_view_backlog_for_scrum_board,Total:121 Passed:92 Failed:3
+1692269728682,980,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:122 Passed:93 Failed:3
+1692269730340,1657,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:123 Passed:94 Failed:3
+1692269730817,475,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:124 Passed:95 Failed:3
+1692269731354,535,selenium_view_issue,Success,True,
+.test_1_selenium_view_issue,Total:125 Passed:96 Failed:3
+1692269731788,433,selenium_log_out,Success,True,
+.test_2_selenium_z_log_out,Total:126 Passed:97 Failed:3
+
+
+=============================== warnings summary ===============================
+../../root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204
+  /root/.bzt/python-packages/3.11.4/_pytest/config/__init__.py:1204: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: apiritif
+    self._mark_plugins_for_rewrite(hook)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 14 passed, 1 warning in 34.99s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.11.4, pytest-7.4.0, pluggy-1.2.0
+rootdir: /dc-app-performance-toolkit/app
+plugins: xdist-3.3.1, apiritif-1.1.3
+collected 14 items
+
+selenium_ui/jira_ui.py get driver from global
+clear browser cookies
+1692269732016,160,selenium_login:open_login_page,Success,True,
+node_id:jira-0
+1692269732739,723,selenium_login:login_and_view_dashboard,Success,True,
+1692269732740,884,selenium_login,Success,True,
+.test_0_selenium_a_login,Total:127 Passed:98 Failed:3
+1692269733393,491,selenium_project_summary,Success,True,
+.test_1_selenium_view_project_summary,Total:128 Passed:99 Failed:3
+1692269733702,307,selenium_browse_projects_list,Success,True,
+.test_1_selenium_browse_projects_list,Total:129 Passed:100 Failed:3
+1692269734481,777,selenium_browse_boards_list,Success,True,
+.test_1_selenium_browse_boards_list,Total:130 Passed:101 Failed:3
+1692269735304,717,selenium_create_issue:open_quick_create,Success,True,
+1692269737643,1725,selenium_create_issue:fill_and_submit_issue_form:submit_issue_form,Success,True,
+1692269737643,2338,selenium_create_issue:fill_and_submit_issue_form,Success,True,
+1692269737643,3056,selenium_create_issue,Success,True,
+.test_1_selenium_create_issue,Total:131 Passed:102 Failed:3
+1692269738628,876,selenium_edit_issue:open_edit_issue_form,Success,True,
+1692269740135,732,selenium_edit_issue:save_edit_issue_form,Success,True,
+1692269740135,2383,selenium_edit_issue,Success,True,
+.test_1_selenium_edit_issue,Total:132 Passed:103 Failed:3
+1692269740539,402,selenium_save_comment:open_comment_form,Success,True,
+1692269746455,5282,selenium_save_comment:submit_form,Success,True,
+1692269746455,6318,selenium_save_comment,Success,True,
+.test_1_selenium_save_comment,Total:133 Passed:104 Failed:3
+1692269783694,37237,selenium_search_jql,Failed measure: selenium_search_jql - TimeoutException,False,
+FAction: test_1_selenium_search_jql, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '207643', 'issue_key': 'AAFAIA-2135', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_search_jql(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.search_jql(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:139: in search_jql
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269746.455757
+error_msg = 'Failed measure: selenium_search_jql - TimeoutException'
+full_exception = TimeoutException(), success = False
+exc_type = <class 'selenium.common.exceptions.TimeoutException'>
+end = 1692269783.6935053, timing = '37237'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_search_jql - TimeoutException', TimeoutException())
+
+selenium_ui/conftest.py:169: Exception
+
+test_1_selenium_search_jql,Total:134 Passed:104 Failed:4
+1692269839707,20133,selenium_view_scrum_board_backlog,Failed measure: selenium_view_scrum_board_backlog - TimeoutException,False,
+FAction: test_1_selenium_view_backlog_for_scrum_board, Error: jira_webdriver = <selenium.webdriver.chrome.webdriver.WebDriver (session="d75d4046f25d6b2f82cb658cfa20fff6")>
+jira_datasets = {'custom_issues': [], 'issue_id': '207643', 'issue_key': 'AAFAIA-2135', 'issues': [['AABIS-1', '914565', 'AABIS'], ['A...', 'AABIS'], ['AABIS-4', '914568', 'AABIS'], ['AABIS-5', '914569', 'AABIS'], ['AABIS-6', '914570', 'AABIS'], ...], ...}
+jira_screen_shots = None
+
+    def test_1_selenium_view_backlog_for_scrum_board(jira_webdriver, jira_datasets, jira_screen_shots):
+>       modules.view_backlog_for_scrum_board(jira_webdriver, jira_datasets)
+
+selenium_ui/jira_ui.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+selenium_ui/jira/modules.py:217: in view_backlog_for_scrum_board
+    measure()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (), kwargs = {}, node_ip = '', start = 1692269819.5727315
+error_msg = 'Failed measure: selenium_view_scrum_board_backlog - TimeoutException'
+full_exception = TimeoutException(), success = False
+exc_type = <class 'selenium.common.exceptions.TimeoutException'>
+end = 1692269839.7066638, timing = '20133'
+lockfile = '/dc-app-performance-toolkit/app/results/jira/2023-08-17_10-42-18/selenium.jtl.lock'
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if LOGIN_ACTION_NAME in interaction:
+            globals.login_failed = False
+        if globals.login_failed:
+            pytest.skip("login is failed")
+        node_ip = ""
+        start = time()
+        error_msg = 'Success'
+        full_exception = ''
+        if args:
+            driver = [arg for arg in args if isinstance(arg, Chrome)]
+            node_ip = "" if not driver else getattr(driver[0], "node_ip", "")
+        try:
+            func(*args, **kwargs)
+            success = True
+        except Exception:
+            success = False
+            # https://docs.python.org/2/library/sys.html#sys.exc_info
+            exc_type, full_exception = sys.exc_info()[:2]
+            error_msg = f"Failed measure: {interaction} - {exc_type.__name__}"
+        end = time()
+        timing = str(int((end - start) * 1000))
+    
+        lockfile = f'{selenium_results_file}.lock'
+    
+        with filelock.SoftFileLock(lockfile):
+            with open(selenium_results_file, "a+") as jtl_file:
+                timestamp = round(time() * 1000)
+                if explicit_timing:
+                    jtl_file.write(f"{timestamp},{explicit_timing*1000},{interaction},,{error_msg},"
+                                   f",{success},0,0,0,0,,0\n")
+                else:
+                    jtl_file.write(f"{timestamp},{timing},{interaction},,{error_msg}"
+                                   f",,{success},0,0,0,0,{node_ip},0\n")
+    
+        print(f"{timestamp},{timing},{interaction},{error_msg},{success},{node_ip}")
+    
+        if not success:
+            if LOGIN_ACTION_NAME in interaction:
+                globals.login_failed = True
+>           raise Exception(error_msg, full_exception)
+E           Exception: ('Failed measure: selenium_view_scrum_board_backlog - TimeoutException', TimeoutException())
+
+selenium_ui/conftest.py:169: Exception
+
+test_1_selenium_view_backlog_for_scrum_board,Total:135 Passed:104 Failed:5
+1692269855816,5214,selenium_view_scrum_board,Success,True,
+.test_1_selenium_view_scrum_board,Total:136 Passed:105 Failed:5
+1692269873689,17871,selenium_view_kanban_board,Success,True,
+.test_1_selenium_view_kanban_board,Total:137 Passed:106 Failed:5
+1692269879121,5431,selenium_view_dashboard,Success,True,
+.test_1_selenium_view_dashboard,Total:138 Passed:107 Failed:5

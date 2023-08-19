@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,success,bytes,grpThreads,allThreads,Latency,Hostname,Connect
+1692259401532,1195,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-1,true,57726,2,2,0,4c1cf7d80f04,72
+1692259402555,1067,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-2,true,57756,3,3,0,4c1cf7d80f04,52
+1692259403483,721,jmeter_view_issue,200,"Number of samples in transaction : 9, number of failing samples : 0",Jira 1-1,true,41298,3,3,0,4c1cf7d80f04,0
+1692259403566,1062,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-3,true,57635,4,4,0,4c1cf7d80f04,51
+1692259403635,1379,jmeter_search_jql,200,"Number of samples in transaction : 14, number of failing samples : 0",Jira 1-2,true,141414,4,4,0,4c1cf7d80f04,0
+1692259404634,628,jmeter_view_dashboard,200,"Number of samples in transaction : 8, number of failing samples : 0",Jira 1-3,true,69875,4,4,0,4c1cf7d80f04,0
+1692259404580,1052,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-4,true,57625,5,5,0,4c1cf7d80f04,50
+1692259405641,648,jmeter_view_scrum_board,200,"Number of samples in transaction : 9, number of failing samples : 0",Jira 1-4,true,23777,5,5,0,4c1cf7d80f04,0
+1692259405588,1065,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-5,true,57603,6,6,0,4c1cf7d80f04,51
+1692259406662,720,jmeter_view_issue,200,"Number of samples in transaction : 9, number of failing samples : 0",Jira 1-5,true,43046,6,6,0,4c1cf7d80f04,0
+1692259406596,1036,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-6,true,57558,7,7,0,4c1cf7d80f04,48
+1692259407603,1050,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-7,true,57717,8,8,0,4c1cf7d80f04,50
+1692259407637,1106,jmeter_view_backlog,200,"Number of samples in transaction : 13, number of failing samples : 0",Jira 1-6,true,219244,8,8,0,4c1cf7d80f04,0
+1692259408661,686,jmeter_view_issue,200,"Number of samples in transaction : 9, number of failing samples : 0",Jira 1-7,true,39670,8,8,0,4c1cf7d80f04,0
+1692259408611,1067,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-8,true,56744,10,10,0,4c1cf7d80f04,51
+1692259409685,211,jmeter_create_issue:open_quick_create,200,"Number of samples in transaction : 3, number of failing samples : 0",Jira 1-8,true,22936,10,10,0,4c1cf7d80f04,0
+1692259409903,302,jmeter_create_issue:fill_and_submit_issue_form,200,"Number of samples in transaction : 2, number of failing samples : 0",Jira 1-8,true,27212,10,10,0,4c1cf7d80f04,0
+1692259409618,1062,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-9,true,58775,11,11,0,4c1cf7d80f04,50
+1692259409635,1060,jmeter_login_and_view_dashboard,200,"Number of samples in transaction : 10, number of failing samples : 0",Jira 1-10,true,58653,11,11,0,4c1cf7d80f04,51
+1692259410704,627,jmeter_view_dashboard,200,"Number of samples in transaction : 8, number of failing samples : 0",Jira 1-10,true,69686,11,11,0,4c1cf7d80f04,0
