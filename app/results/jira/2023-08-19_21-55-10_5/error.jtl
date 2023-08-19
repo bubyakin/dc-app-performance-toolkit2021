@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="244" lt="0" ts="1692482375275" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-130" dt="" de="" by="14955" ng="200" na="200">
+  <httpSample t="74" lt="74" ts="1692482375275" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-130" dt="text" de="UTF-8" by="12982" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 21:59:35 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1319x6125x2
+X-ASESSIONID: 8gp92d
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12448
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692482375349" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-130" dt="text" de="UTF-8" by="690" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 21:59:35 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1319x6129x1
+X-ASESSIONID: 8gp92d
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="59" lt="59" ts="1692482375402" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-130" dt="text" de="UTF-8" by="672" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 21:59:35 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1319x6134x3
+X-ASESSIONID: 8gp92d
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="58" lt="58" ts="1692482375461" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-130" dt="text" de="UTF-8" by="611" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 21:59:35 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1319x6136x3
+X-ASESSIONID: 8gp92d
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_OMKL1912&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=19a349eccf6487cb359615affc608845|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_000fab38a9b41ed373959b71c05ac884cb5fbe84_lin; JSESSIONID=C9750C8E6BE5961CFCB7ABF2F3093185</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_OMKL1912</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="60108" lt="0" ts="1692482425444" s="false" lb="jmeter_app_specific_action" rc="504" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-82" dt="" de="" by="14480" ng="200" na="200">
+  <httpSample t="66" lt="65" ts="1692482425444" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-82" dt="text" de="UTF-8" by="12982" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:00:25 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1320x7837x1
+X-ASESSIONID: fd46is
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12448
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692482425511" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-82" dt="text" de="UTF-8" by="620" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:00:25 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1320x7844x4
+X-ASESSIONID: fd46is
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 89
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 56
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="59879" lt="59879" ts="1692482425565" s="false" lb="Rename" rc="504" rm="GATEWAY_TIMEOUT" tn="Jira 1-82" dt="" de="" by="75" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 504 GATEWAY_TIMEOUT
+Content-Length: 0
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 56
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=b58da266ae4ca93a0966c2d79fb67796|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_4022b76de96fb02807e36bdbfbd16d0f7ae4dc8e_lin; JSESSIONID=31BEDEEF0B1C94678AF9B38C7D24EA61</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">  {&quot;oldName&quot;:&quot;test_NPUD9224&quot;, &quot;newName&quot;:&quot;test_ZJTL7957&quot;}</queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="109" lt="108" ts="1692482485444" s="true" lb="Check Result" rc="200" rm="" tn="Jira 1-82" dt="text" de="UTF-8" by="803" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:01:25 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1321x10172x3
+X-ASESSIONID: fd46is
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_ZJTL7957</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="232" lt="0" ts="1692482644593" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-120" dt="" de="" by="14961" ng="200" na="200">
+  <httpSample t="65" lt="65" ts="1692482644593" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-120" dt="text" de="UTF-8" by="12985" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:04:04 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1324x17361x3
+X-ASESSIONID: l282cj
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12450
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692482644658" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-120" dt="text" de="UTF-8" by="673" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:04:04 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1324x17368x4
+X-ASESSIONID: l282cj
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692482644711" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-120" dt="text" de="UTF-8" by="691" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:04:04 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1324x17371x3
+X-ASESSIONID: l282cj
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="61" lt="61" ts="1692482644764" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-120" dt="text" de="UTF-8" by="612" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:04:04 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1324x17374x3
+X-ASESSIONID: l282cj
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_NWIL9145&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=19a349eccf6487cb359615affc608845|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_e39ab601a9f384656621011b2d9f773ca0acc87a_lin; JSESSIONID=67954DD436A68371CE4D1F4460872846</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_NWIL9145</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="225" lt="0" ts="1692482961521" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-135" dt="" de="" by="15012" ng="200" na="200">
+  <httpSample t="67" lt="67" ts="1692482961521" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-135" dt="text" de="UTF-8" by="12996" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:09:21 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1329x235124x6
+X-ASESSIONID: h13wn2
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12460
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692482961588" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-135" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:09:21 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1329x235128x4
+X-ASESSIONID: h13wn2
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692482961640" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-135" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:09:21 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1329x235132x4
+X-ASESSIONID: h13wn2
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692482961692" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-135" dt="text" de="UTF-8" by="632" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:09:21 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1329x235134x4
+X-ASESSIONID: h13wn2
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_DNAT8493&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=e41ec03ddfcbad01a914639c0b5377e0|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_8e5efa413d00931872020c6577365602cf31ebfc_lin; JSESSIONID=1B4A8937DFABACC096AB364981E397D9</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_DNAT8493</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="226" lt="0" ts="1692483443605" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-83" dt="" de="" by="14996" ng="200" na="200">
+  <httpSample t="68" lt="68" ts="1692483443605" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-83" dt="text" de="UTF-8" by="12998" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:17:23 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1337x50362x1
+X-ASESSIONID: 1qktch8
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483443673" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-83" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:17:23 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1337x50364x1
+X-ASESSIONID: 1qktch8
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483443726" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-83" dt="text" de="UTF-8" by="674" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:17:23 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1337x50365x1
+X-ASESSIONID: 1qktch8
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692483443778" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-83" dt="text" de="UTF-8" by="632" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:17:23 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1337x50368x3
+X-ASESSIONID: 1qktch8
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_JTRM4457&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=19a349eccf6487cb359615affc608845|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_b31c2c0aca4dd32f421c813d8e3fca19e3841b6a_lin; JSESSIONID=CA192EE22899FB66A489793BF6931492</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_JTRM4457</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="221" lt="0" ts="1692483571841" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-35" dt="" de="" by="15000" ng="200" na="200">
+  <httpSample t="63" lt="63" ts="1692483571842" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-35" dt="text" de="UTF-8" by="12999" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:19:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 1339x717268x3
+X-ASESSIONID: 1k3pmws
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483571906" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-35" dt="text" de="UTF-8" by="693" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:19:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 1339x717272x4
+X-ASESSIONID: 1k3pmws
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483571958" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-35" dt="text" de="UTF-8" by="675" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:19:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 1339x717274x2
+X-ASESSIONID: 1k3pmws
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692483572010" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-35" dt="text" de="UTF-8" by="633" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:19:32 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-0
+X-AREQUESTID: 1339x717279x3
+X-ASESSIONID: 1k3pmws
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_DLAR5891&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=93685af0a5abf9f90aec12f20caf88be|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_1786c52dc77b275eaa99f5c759bb7f1df1c9423b_lin; JSESSIONID=CA0F8F567BE72D1034B9D6A9A59E21B1</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_DLAR5891</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="227" lt="0" ts="1692483780890" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-106" dt="" de="" by="14995" ng="200" na="200">
+  <httpSample t="69" lt="69" ts="1692483780890" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-106" dt="text" de="UTF-8" by="12998" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:23:00 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1343x266589x3
+X-ASESSIONID: lrok0q
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483780959" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-106" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:23:00 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1343x266594x2
+X-ASESSIONID: lrok0q
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692483781011" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-106" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:23:01 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1343x266598x2
+X-ASESSIONID: lrok0q
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692483781063" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-106" dt="text" de="UTF-8" by="613" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:23:01 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-1
+X-AREQUESTID: 1343x266602x2
+X-ASESSIONID: lrok0q
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_CJAP4277&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=e41ec03ddfcbad01a914639c0b5377e0|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_daa9b5c45a69ca2c9702a84a420374816d127ee1_lin; JSESSIONID=ABD5E150E0C8AE173111B0FA17F0105B</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_CJAP4277</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="234" lt="0" ts="1692484145057" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-6" dt="" de="" by="14992" ng="200" na="200">
+  <httpSample t="72" lt="72" ts="1692484145057" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-6" dt="text" de="UTF-8" by="12997" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:29:05 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1349x68857x3
+X-ASESSIONID: pzwa7a
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692484145129" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-6" dt="text" de="UTF-8" by="691" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:29:05 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1349x68864x3
+X-ASESSIONID: pzwa7a
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="54" lt="54" ts="1692484145182" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-6" dt="text" de="UTF-8" by="673" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:29:05 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1349x68868x5
+X-ASESSIONID: pzwa7a
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692484145236" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-6" dt="text" de="UTF-8" by="631" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:29:05 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1349x68870x2
+X-ASESSIONID: pzwa7a
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_RWGJ4912&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=b58da266ae4ca93a0966c2d79fb67796|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_79b0b5fc01545deadc4553132999e0d1ce775fcc_lin; JSESSIONID=45BEAA11B10E6441EDA5F3E922DBD0B5</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_RWGJ4912</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="222" lt="0" ts="1692484626793" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-48" dt="" de="" by="15014" ng="200" na="200">
+  <httpSample t="65" lt="65" ts="1692484626793" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-48" dt="text" de="UTF-8" by="12998" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:37:06 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1357x85991x2
+X-ASESSIONID: 1pt2kq3
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692484626859" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-48" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:37:06 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1357x85993x2
+X-ASESSIONID: 1pt2kq3
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="52" lt="52" ts="1692484626911" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-48" dt="text" de="UTF-8" by="692" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:37:06 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1357x85995x3
+X-ASESSIONID: 1pt2kq3
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692484626963" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-48" dt="text" de="UTF-8" by="632" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:37:06 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-3
+X-AREQUESTID: 1357x85997x4
+X-ASESSIONID: 1pt2kq3
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_EBCM8599&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=b58da266ae4ca93a0966c2d79fb67796|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_bd12b5c426c64bf0da184ecb5dd1cee4a7bdb493_lin; JSESSIONID=9FF6CB7905EC5DBB1E8447E4125891DF</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_EBCM8599</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="226" lt="0" ts="1692485004337" s="false" lb="jmeter_app_specific_action" rc="404" rm="Number of samples in transaction : 4, number of failing samples : 1" tn="Jira 1-129" dt="" de="" by="14963" ng="200" na="200">
+  <httpSample t="65" lt="65" ts="1692485004337" s="true" lb="Get random groupName amoung of 200 groups" rc="200" rm="" tn="Jira 1-129" dt="text" de="UTF-8" by="12999" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:43:24 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1363x113308x1
+X-ASESSIONID: 1l13rr9
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 12462
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/groups/picker?maxResults=200</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692485004402" s="true" lb="Check Renaming" rc="200" rm="" tn="Jira 1-129" dt="text" de="UTF-8" by="675" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>false</failure>
+      <error>false</error>
+      <failureMessage></failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:43:24 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1363x113312x2
+X-ASESSIONID: 1l13rr9
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/check</java.net.URL>
+  </httpSample>
+  <httpSample t="53" lt="53" ts="1692485004455" s="true" lb="Rename" rc="200" rm="" tn="Jira 1-129" dt="text" de="UTF-8" by="675" ng="200" na="200">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:43:24 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1363x113314x1
+X-ASESSIONID: 1l13rr9
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 140
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Content-Length: 62
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/groups/latest/rename</java.net.URL>
+  </httpSample>
+  <httpSample t="55" lt="55" ts="1692485004508" s="false" lb="Check Result" rc="404" rm="" tn="Jira 1-129" dt="text" de="UTF-8" by="614" ng="200" na="200">
+    <assertionResult>
+      <name>JSON Assertion</name>
+      <failure>true</failure>
+      <error>false</error>
+      <failureMessage>No results for path: $[&apos;name&apos;]</failureMessage>
+    </assertionResult>
+    <responseHeader class="java.lang.String">HTTP/1.1 404 
+Cache-Control: no-cache, no-store, no-transform
+Content-Security-Policy: sandbox
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 19 Aug 2023 22:43:24 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000
+X-ANODEID: jira-2
+X-AREQUESTID: 1363x113317x1
+X-ASESSIONID: 1l13rr9
+X-AUSERNAME: admin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Seraph-LoginReason: OK
+X-XSS-Protection: 1; mode=block
+Content-Length: 80
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Origin: http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com:80
+Content-Type: application/json
+Host: a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.20)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errorMessages&quot;:[&quot;The group named &apos;test_BUXY3690&apos; does not exist&quot;],&quot;errors&quot;:{}}</responseData>
+    <cookies class="java.lang.String">INGRESSCOOKIE=19a349eccf6487cb359615affc608845|a4aa6a3e497c70fb8ce2ddf4dcc8ec5d; atlassian.xsrf.token=BCWY-XMNP-PEH6-UHNH_7af2446793117af6a6310126ce5c219eb14eccf9_lin; JSESSIONID=9C875F66200685B1E054E2BBB8CD8889</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://a27c3b1f1f2f34820a995da039347210-1307208457.us-east-2.elb.amazonaws.com/jira/rest/api/2/group?groupname=test_BUXY3690</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+
+</testResults>
